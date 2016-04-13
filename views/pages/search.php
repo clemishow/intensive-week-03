@@ -52,6 +52,7 @@ if(!empty($_GET['keywords'])){
 
 $job = false; //SI LE DIRECTOR EXISTE DANS LES CREDITS
 $i = 0; //INDEX DE NAVIGATION DANS LE TABLEAU $response->results
+$index_row = $i; //INDEX D'INCREMENTATION DE ROW
 
 if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
     // Show result
@@ -69,7 +70,7 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
 ?>  
 
 <?
-if($i%4==0){
+if($index_row%4==0){
 ?>
 <div class="row">
 <?
@@ -87,11 +88,12 @@ if($i%4==0){
     </div>
 
 <?
-if($i%4==3){
+if($index_row%4==3){
 ?>
 </div>
 <?
 }
+$index_row++;
 ?>
 
 

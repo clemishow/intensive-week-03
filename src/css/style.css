@@ -12,7 +12,8 @@ body {
   background-size: cover;
   background-position: center center;
   color: #fefefe;
-  font-family: "Proxima Nova"; }
+  font-family: "Proxima Nova";
+  border-top: 4px solid #34b475; }
 
 .page-search-site {
   background: #07182e; }
@@ -36,6 +37,11 @@ header {
 
 header .logo-site {
   width: 140px; }
+
+header .logo-account {
+  width: 24px;
+  position: relative;
+  top: 30px; }
 
 /**
 *** FOOTER

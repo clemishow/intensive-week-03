@@ -26,6 +26,7 @@ body {
   background-position: center center;
   color: $color-light;
   font-family: $font-proxima;
+  border-top: 4px solid $color-dominant;
 }
 
 .page-search-site {
@@ -56,6 +57,12 @@ header {
 
 header .logo-site {
   width: 140px;
+}
+
+header .logo-account {
+  width: 24px;
+  position: relative;
+  top: 30px;
 }
 
 /**

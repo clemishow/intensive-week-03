@@ -1,7 +1,6 @@
 <?php
 
 $api_key = "c68c6286e0d2e8c23192ea047e8fcbe1";
-var_dump($_GET);
 
 if(isset($_GET['id'])){
     $index_movie = $_GET['id'];
@@ -44,7 +43,7 @@ $credits = json_decode($credits);
 
 ?>
 <div>
-    <img src="http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>" alt="">
+    <img class="img-responsive" src="http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>" alt="poster-film">
     <h3><?= $response->title ?></h3>
     <p><?= $response->overview ?></p>
     <? 

@@ -1,11 +1,20 @@
-/*iframe {
+iframe {
   display: none;
-}*/
+}
 
+/* COLORS */
 $color-light: #fefefe;
-$color-dark: #333333;
+$color-dark: #252525;
+$color-dominant: #34b475;
+
+/* FONTS */
 $font-agenda: 'Agenda';
 $font-proxima: 'Proxima Nova';
+
+/* TRANSITIONS */
+$transition-fast: 150ms all;
+$transition-standard: 300ms all;
+$transition-slow: 600ms all;
 
 body {
   background-image: url('../images/bg.jpg');
@@ -16,6 +25,12 @@ body {
   font-family: 'Agenda';
 }
 
+a:hover {
+  text-decoration: none;
+  color: $color-dominant;
+  transition: $transition-fast all;
+}
+
 header {
   height: 80px;
 }
@@ -24,27 +39,57 @@ header .logo-site {
   width: 140px;
 }
 
-.logo-landing {
-  width: 360px;
-}
-
 /**
 *** LANDING PAGE
 */
 
+.logo-landing {
+  width: 360px;
+  margin-top: 25%;
+}
+
 .start-exp {
-  font-size: 18px;
+  font-size: 24px;
   color: $color-light;
+  transition: $transition-standard all;
+  
+  &:before {
+    content: "";
+    width: 6px;
+    height: 42px;
+    margin-top: -4px;
+    margin-left: -15px;
+    background: $color-dominant;
+    position: absolute;
+    transition: $transition-standard all;
+  }
+
+  &:after {
+    content: "";
+    width: 6px;
+    height: 42px;
+    margin-top: -4px;
+    margin-left: 10px;
+    background: $color-dominant;
+    position: absolute;
+    transition: $transition-standard all;
+  }
 }
 
 /**
-*** PROGRESS BAR
+*** PLAYER
 */
+
+.icon-player {
+  width: 16px;
+}
+
+/* PROGRESS BAR */
 
 .player-controls .seek-bar-video {
   width: 100%;
-  height: 5px;
-  background: #22313F;
+  height: 13px;
+  background: $color-light;
   margin: 0 auto;
   cursor: pointer;
   position: relative;
@@ -54,7 +99,7 @@ header .logo-site {
 .player-controls .seek-bar-video .progress-bar-video {
   width: 100%;
   height: 100%;
-  background: #e67e22;
+  background: $color-dominant;
   position: absolute;
   z-index: 10;
   -webkit-transform: scaleX(0);
@@ -75,13 +120,12 @@ header .logo-site {
 }
 
 .player-controls .seek-bar-video .cursor-bar-video {
-  width: 19px;
+  width: 9px;
   height: 19px;
-  border-radius: 50%;
-  background: #f39c12;
+  background: $color-dominant;
   position: absolute;
-    top: -5px;
-  margin-left: -8px;
+    top: -2.5px;
+  margin-left: -4px;
   -webkit-transform: scale(0);
      -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -89,6 +133,11 @@ header .logo-site {
       transform: scale(0);
   z-index: 10;
 }
+
+
+/*
+*** SEARCH
+*/
 
 header .hidden-search-bar {
   display: none;
@@ -98,11 +147,6 @@ header .glyphicon-search {
   color: $color-light;
   font-size: 25px;
 }
-
-/*
-*** SEARCH
-*/
-
 
 #search input[type="search"]{
     

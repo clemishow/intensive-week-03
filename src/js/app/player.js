@@ -171,9 +171,6 @@ player_container.controls.seek_bar.addEventListener('mouseover', function() {
 	player_container.controls.cursor_bar.style.msTransform = 'scale(1)';
 	player_container.controls.cursor_bar.style.oTransform = 'scale(1)';
 	player_container.controls.cursor_bar.style.transform = 'scale(1)';
-	player_container.controls.seek_bar.style.height = '9px';
-	player_container.controls.progress_bar.style.height = '9px';
-	player_container.controls.seek_bar.style.top = '-2px';
 });
 
 player_container.controls.seek_bar.addEventListener('mouseout', function() {
@@ -182,9 +179,6 @@ player_container.controls.seek_bar.addEventListener('mouseout', function() {
 	player_container.controls.cursor_bar.style.msTransform = 'scale(0)';
 	player_container.controls.cursor_bar.style.oTransform = 'scale(0)';
 	player_container.controls.cursor_bar.style.transform = 'scale(0)';
-	player_container.controls.seek_bar.style.height = '5px';
-	player_container.controls.progress_bar.style.height = '5px';
-	player_container.controls.seek_bar.style.top = '0px';
 });
 
 

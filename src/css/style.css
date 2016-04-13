@@ -15,7 +15,8 @@ body {
   font-family: "Proxima Nova";
   border-top: 4px solid #34b475; }
 
-.page-search-site {
+.page-search-site,
+.page-account {
   background: #07182e; }
 
 .site-wrapper {

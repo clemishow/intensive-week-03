@@ -1,4 +1,8 @@
-<?php	
-	
-		$title = 'Mon compte';
-		$class = 'account';
+<?php
+	if(!isset($_SESSION['state'])) {
+		include 'login.php';
+	}
+
+	else {
+		include 'my-account.php';
+	}

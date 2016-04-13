@@ -17,11 +17,14 @@ else if ($q == 'search')
 else if ($q == 'movie') 
 	$page = 'movie';
 
+else if ($q == 'account') 
+	$page = 'account';
+
 else 
 	$page = '404';
 
 
-if($q == 'search' || $q == 'movie' || $q == 'player'){
+if($q == 'search' || $q == 'movie' || $q == 'player' || $q == 'account'){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';

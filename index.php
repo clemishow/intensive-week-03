@@ -8,6 +8,9 @@ $q = empty($_GET['q']) ? '' : $_GET['q'];
 if ($q == '') 
 	$page = 'home';
 
+else if ($q == 'player') 
+	$page = 'player';
+
 else if ($q == 'search') 
 	$page = 'search';
 
@@ -18,7 +21,7 @@ else
 	$page = '404';
 
 
-if($q == '' || $q == 'search' || $q == 'movie'){
+if($q == '' || $q == 'search' || $q == 'movie' || $q == 'player' ){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';

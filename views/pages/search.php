@@ -60,6 +60,16 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
     //echo '<pre>';
     //print_r($response);
     //echo '</pre>';
+    
+    if($response->total_results == 0){
+?>
+        <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h3 class="text-center">Aucun résultat pour <?= $search ?></h3>
+            </div>
+        <div class="col-md-3"></div>
+<?
+    }
 
     foreach($response->results as $results): //ON PARCOUR CHAQUE FILM
         if($response->results[$i]->poster_path){ //SI L'AFFICHE EXISTE

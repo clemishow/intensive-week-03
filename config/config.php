@@ -1,6 +1,6 @@
 <?php 
 	// URL
-	define('URL','http://localhost:8888/intensive-week/');
+	define('URL','http://localhost/intensive-week-03/');
 
 	// DB CONNEXION
 	define('DB_HOST','localhost');

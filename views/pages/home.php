@@ -1,4 +1,4 @@
-/*<?php
+<?php
 	$movie = $_GET['id'];
 	$query = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 	$video = $query->fetch();

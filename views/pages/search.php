@@ -70,7 +70,7 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
 
 <div class="img_search">
     <? $index_movie = $response->results[$i]->id //SAUVEGARDE L'ID DU FILM ?>
-    <a href="<?= URL ?>page&id=<?=$index_movie?>"><img src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt=""></a>
+    <a href="<?= URL ?>movie&id=<?=$index_movie?>"><img src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt=""></a>
     
     <?
     // ??? EST IL NECESSAIRE DE CHARGER LE NOM DE RÉALISATEUR ET DU FILM DANS LA PAGE DE RECHERCHE, CAR LES REQUETES SONT TROP LOURDE

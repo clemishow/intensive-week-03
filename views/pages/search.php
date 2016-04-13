@@ -60,16 +60,6 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
     //echo '<pre>';
     //print_r($response);
     //echo '</pre>';
-    
-    if($response->total_results == 0){
-?>
-        <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <h3 class="text-center">Aucun résultat pour <?= $search ?></h3>
-            </div>
-        <div class="col-md-3"></div>
-<?
-    }
 
     foreach($response->results as $results): //ON PARCOUR CHAQUE FILM
         if($response->results[$i]->poster_path){ //SI L'AFFICHE EXISTE
@@ -118,15 +108,17 @@ $index_row++;
     if($response->total_pages > 1){   
 ?>
 
-<div class="nav_pages">
-
-    <?
-        for($i = 1; $i <= $response->total_pages; $i++){
-
-            echo "<a href=\"search?keywords=$search&p=$i\">-  $i  </a>";
-
-        }    ?>
-
+<div class="row">
+    <div class="col-md-4"></div>
+        <div class="col-md-4 text-center">
+                <?
+                    for($i = 1; $i <= $response->total_pages; $i++){
+            
+                        echo "<a href=\"search?keywords=$search&p=$i\">-  $i  </a>";
+            
+                    }    ?>
+        </div>
+    <div class="col-md-4"></div>
 </div>
 
 <?

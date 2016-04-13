@@ -7,12 +7,6 @@
 	<?
 	// BARRE DE RECHERCHE
 	?>
-	<div id="search">
-    	<form method="GET" action="<?= URL ?>search">
-        	<input type="search" name="keywords" placeholder="">
-        	<input type="submit" class="hide">
-    	</form>
-	</div>
 	<?php // require 'views/pages/add-song.php'; ?>
 	<button class="btn btn-default">EN SAVOIR PLUS</button>
 	<div class="row">

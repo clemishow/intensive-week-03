@@ -72,5 +72,6 @@ $credits = json_decode($credits);
     ?>
     <h4><?= $credits->crew[$j]->name ?></h4>
     <?}?>
+    <a href="#" class="add-song btn btn-default">AJOUTER</a>
 
 </div>

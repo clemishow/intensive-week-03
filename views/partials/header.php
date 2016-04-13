@@ -8,5 +8,25 @@
 </head>
 <body class="page-<?= $class ?>">
         <header>
-            <a href="<?= URL ?>"><h1>Mooving</h1></a>
+            <div class="col-md-2">
+            	<a href="<?= URL ?>">
+            		<img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo">
+            	</a>
+            </div>
+            <div class="col-md-10">
+            	<div class="col-md-10"></div>
+		        	<div class="col-md-2">
+		        		<div id="search">
+					    	<form method="GET" action="<?= URL ?>search">
+					    		<a href="#">
+					    			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					    		</a>
+					        	<input class="search-bar" type="search" name="keywords">
+					        	<input type="submit" class="hide">
+					    	</form>
+					    	<div class="account"></div>
+						</div>
+
+		        	</div>
+            </div>
         </header>

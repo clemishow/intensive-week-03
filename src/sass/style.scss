@@ -2,11 +2,21 @@
   display: none;
 }*/
 
+$color-light: #fefefe;
+$color-dark: #333333;
+
 body {
-  background: #1c1c1c;
-  color: #fefefe;
-  padding: 0 10%;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: $color-light;
+  padding: 2% 5%;
 }
+
+header .logo-site {
+  width: 140px;
+}
+
 
 /**
 *** PROGRESS BAR
@@ -61,26 +71,16 @@ body {
   z-index: 10;
 }
 
-#search{
-    width: 100%;
-    height: 20%;
+header .search-bar {
+  display: none;
 }
 
-/*.hide {
-    display: none;
-}*/
+header .glyphicon-search {
+  color: $color-light;
+}
 
 #search input[type="search"]{
-    background: #000;
-    top: 50%;
-    width: 100%;
-    font-size: 42px;
-    font-weight: 300;
-    text-align: center;
-    margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 30px;
-    outline: none;
+    
 }
 
 .img_search{

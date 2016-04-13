@@ -1,8 +1,6 @@
-
 	var player_container = {};
-	var test = 31;
 
-	player_container.controls = document.querySelector('.player-controls');
+	player_container.controls 					= document.querySelector('.player-controls');
 	player           							= document.querySelector('#player');
 	durationVideo    							= player_container.controls.querySelector('.durationVideo');
 	currentTimeVideo 							= player_container.controls.querySelector('.currentTimeVideo');
@@ -10,6 +8,7 @@
 	player_container.controls.seek_bar 		  	= player_container.controls.querySelector('.seek-bar-video');
 	player_container.controls.cursor_bar	 	= player_container.controls.querySelector('.cursor-bar-video');
 	player_container.controls.progress_bar 	  	= player_container.controls.querySelector('.progress-bar-video');
+
 
 	var tag = document.createElement('script');
 	tag.src = "https://www.youtube.com/iframe_api";
@@ -189,19 +188,5 @@ player_container.controls.seek_bar.addEventListener('mouseout', function() {
 });
 
 
-// AJAX 
-function next() {
-	var xhr = getXMLHttpRequest();
 
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
-			console.log('gg');
-		}
-	};
-
-	var movie = encodeURIComponent("02_Pirates");
-
-	xhr.open("GET", "home.php?movie=" + movie, true);
-	xhr.send(null);
-}
 	

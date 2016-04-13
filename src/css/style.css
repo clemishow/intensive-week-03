@@ -202,6 +202,14 @@ header .active-search a {
   left: 12px; }
 
 /* SEARCH BAR */
+#search .search-bar {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  border-bottom: solid 3px #34b475; }
+
 .nav_pages {
   width: 100%;
   letter-spacing: 3px;

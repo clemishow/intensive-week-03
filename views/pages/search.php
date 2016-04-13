@@ -4,7 +4,7 @@ $active = 'active';
 
 <div id="search">
     <form method="GET" action="#">
-        <input type="search" name="keywords" placeholder="">
+        <input class="search-bar" type="search" name="keywords" placeholder="Recherche">
         <input type="submit" class="hide">
     </form>
 </div>
@@ -95,6 +95,7 @@ if($index_row%4==3){
 }
 $index_row++;
 ?>
+
 
 
 <? } ?>

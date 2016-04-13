@@ -13,8 +13,8 @@
         	<input type="submit" class="hide">
     	</form>
 	</div>
-	<?php require 'views/pages/add-song.php'; ?>
-	<button class="btn btn-default">Ajout</button>
+	<?php // require 'views/pages/add-song.php'; ?>
+	<button class="btn btn-default">EN SAVOIR PLUS</button>
 	<div class="row">
 			<div class="col-md-12">
 				<div class="player-controls">
@@ -22,7 +22,8 @@
 					<button href="javascript:void(0);" onclick="play();" class="btn btn-default">PLAY</button>
 					<button href="javascript:void(0);" onclick="mute();" class="btn btn-default">MUTE</button>
 					<button href="javascript:void(0);" onclick="max();" class="btn btn-default">MAX</button>
-					<a href="<?php  ?>" class="btn btn-default">NEXT</a>
+					<a href="#" class="btn btn-default">PREVIOUS</a>
+					<a href="#" class="btn btn-default">NEXT</a>
 					<div class="container-duration-current-video">
 						<span class="currentTimeVideo"></span> / <span class="durationVideo"></span> 
 					</div>

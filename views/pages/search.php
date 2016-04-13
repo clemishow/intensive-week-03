@@ -23,12 +23,8 @@ else{
 }
 
 //REQUÊTE DE LA RECHERCHE DE L'UTILISATEUR À L'API
-//echo empty($_GET['keywords']);
 
-//$search = 'batman';
-
-if(!empty($_GET['keywords'])){  
-    echo 'hello world'; 
+if(!empty($_GET['keywords'])){   
     $search = $_GET['keywords'];
     $search = str_replace(' ','+',$search);
     $ch = curl_init();
@@ -59,6 +55,10 @@ $i = 0; //INDEX DE NAVIGATION DANS LE TABLEAU $response->results
 
 if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
     // Show result
+    
+    //echo '<pre>';
+    //print_r($response);
+    //echo '</pre>';
 
     foreach($response->results as $results): //ON PARCOUR CHAQUE FILM
         if($response->results[$i]->poster_path){ //SI L'AFFICHE EXISTE
@@ -70,48 +70,10 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
 
 <div class="img_search">
     <? $index_movie = $response->results[$i]->id //SAUVEGARDE L'ID DU FILM ?>
-    <a href="<?= URL ?>movie&id=<?=$index_movie?>"><img src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt=""></a>
-    
-    <?
-    // ??? EST IL NECESSAIRE DE CHARGER LE NOM DE RÉALISATEUR ET DU FILM DANS LA PAGE DE RECHERCHE, CAR LES REQUETES SONT TROP LOURDE
-    ?>  
+    <a href="<?= URL ?>movie&id=<?=$index_movie?>"><img src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt=""></a>  
     
     <h3><?= $response->results[$i]->title //AFFICHE LE TITRE DU FILM ?></h3> 
-    <?/*
-        $ch = curl_init();
-
-    curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/movie/$index_movie/credits?api_key=$api_key");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-    curl_setopt($ch, CURLOPT_HEADER, FALSE);
-
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        "Accept: application/json"
-    ));
-
-    $credits = curl_exec($ch);
-    curl_close($ch);
-
-    // Json decode
-    $credits = json_decode($credits);
-    //var_dump($credits);
-    $j = 0;
-    foreach($credits->crew as $crew):
-
-    if($credits->crew[$j]->job == 'Director'){
-        $job = true;
-        break;
-    }
-    $j++;
-    endforeach;
-    if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
-        //echo true;
-        //echo '<pre>';
-        //print_r($credits->crew);
-        //echo '</pre>';
-    ?>
-    <h4><?= $credits->crew[$j]->name ?></h4>
-    <?}?>
-    */?>
+ 
 </div>
 <? } ?>
 

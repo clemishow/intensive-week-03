@@ -82,19 +82,19 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
 <?
 if($index_row%4==0){
 ?>
-<div class="row">
+<div class="row row-results">
 <?
 }
 ?>
 
-    <div class="col-md-3">
+    <div class="col-md-3 result-search">
         <? $index_movie = $response->results[$i]->id //SAUVEGARDE L'ID DU FILM ?>
         <div>
             <a href="<?= URL ?>movie&id=<?=$index_movie?>">
                 <img class="img-responsive" src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt="img-film">
             </a>
         </div>
-        <h3><?= $response->results[$i]->title //AFFICHE LE TITRE DU FILM ?></h3>
+        <h3 class="title-movie"><?= $response->results[$i]->title //DISPLAY TITLE MOVIE?></h3>
     </div>
 
 <?

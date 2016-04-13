@@ -28,6 +28,10 @@ body {
   font-family: $font-proxima;
 }
 
+.page-search-site {
+  background: #07182e;
+}
+
 .site-wrapper {
   padding: 2% 5%;
 }
@@ -86,6 +90,10 @@ footer .info-db {
   top: 18px;
   float: left;
   color: #d3d3d3;
+}
+
+.hidden-footer {
+  display: none;
 }
 
 /**
@@ -264,6 +272,7 @@ header .active-search a {
   outline: none;
   font-size: 25px;
   border-bottom: solid 3px $color-dominant;
+  margin-bottom: 40px;
 }
 
 .nav_pages {
@@ -274,6 +283,18 @@ header .active-search a {
 
 .array {
     text-align: left;
+}
+
+/* SEARCH RESULTS */
+
+.result-search .title-movie {
+  font-family: $font-proxima;
+  font-weight: 300;
+  font-size: 24px !important;
+}
+
+.row-results {
+  margin-bottom: 40px;
 }
 
 /*

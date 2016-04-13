@@ -11,7 +11,7 @@
 		<div class="site-wrapper">       
 	        <header>
 	            <div class="col-md-2">
-	            	<a href="<?= URL ?>">
+	            	<a href="<?= URL ?>player">
 	            		<img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo">
 	            	</a>
 	            </div>
@@ -22,7 +22,7 @@
 					    	<form method="GET" action="<?= URL ?>search">
 					    		<div class="container-icon-search">
 					    			<a href="<?= URL ?>search">
-					    				<span class="glyphicon glyphicon-search .active-search-icon" aria-hidden="true"></span>
+					    				<span class="glyphicon glyphicon-search .active-search" aria-hidden="true"></span>
 					    			</a>
 					    		</div>
 					    	</form>

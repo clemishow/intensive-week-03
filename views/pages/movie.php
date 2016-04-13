@@ -43,13 +43,6 @@ $credits = json_decode($credits);
 //var_dump($credits);
 
 ?>
-<div class="array">
-    <?
-    //echo '<pre>';
-    //print_r($response);
-    //echo '</pre>';
-    ?>
-</div>
 <div>
     <img src="http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>" alt="">
     <h3><?= $response->title ?></h3>

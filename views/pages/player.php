@@ -33,3 +33,4 @@
 		<!-- <h3><span class="info-song"><?= $video->song ?></span> – <span class="info-song"><?= $video->artist ?></span></h3> -->
 	</div>
 </section>
+<script src="src/js/app/player.js"></script>

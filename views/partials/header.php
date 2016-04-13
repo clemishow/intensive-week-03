@@ -21,7 +21,7 @@
 					    		<a href="#">
 					    			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 					    		</a>
-					        	<input class="search-bar" type="search" name="keywords">
+					        	<input class="search-bar .hidden-search-bar" type="search" name="keywords">
 					        	<input type="submit" class="hide">
 					    	</form>
 					    	<div class="account"></div>

@@ -8,6 +8,9 @@ body {
   color: #fefefe;
   padding: 2% 5%; }
 
+header {
+  height: 80px; }
+
 header .logo-site {
   width: 140px; }
 
@@ -60,11 +63,12 @@ header .logo-site {
   transform: scale(0);
   z-index: 10; }
 
-header .search-bar {
+header .hidden-search-bar {
   display: none; }
 
 header .glyphicon-search {
-  color: #fefefe; }
+  color: #fefefe;
+  font-size: 25px; }
 
 .img_search {
   display: inline-block;

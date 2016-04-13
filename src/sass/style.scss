@@ -5,12 +5,17 @@
 $color-light: #fefefe;
 $color-dark: #333333;
 
+
 body {
   background-image: url('../images/bg.jpg');
   background-size: cover;
   background-position: center center;
   color: $color-light;
   padding: 2% 5%;
+}
+
+header {
+  height: 80px;
 }
 
 header .logo-site {
@@ -71,12 +76,13 @@ header .logo-site {
   z-index: 10;
 }
 
-header .search-bar {
+header .hidden-search-bar {
   display: none;
 }
 
 header .glyphicon-search {
   color: $color-light;
+  font-size: 25px;
 }
 
 #search input[type="search"]{

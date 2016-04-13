@@ -20,9 +20,11 @@
 		        	<div class="col-md-2">
 		        		<div id="right-col">
 					    	<form method="GET" action="<?= URL ?>search">
-					    		<a href="<?= URL ?>search">
-					    			<span class="glyphicon glyphicon-search <?php if($_GET['search']) $active ?>" aria-hidden="true"></span>
-					    		</a>
+					    		<div class="container-icon-search">
+					    			<a href="<?= URL ?>search">
+					    				<span class="glyphicon glyphicon-search .active-search-icon" aria-hidden="true"></span>
+					    			</a>
+					    		</div>
 					    	</form>
 					    	<div class="account"></div>
 						</div>

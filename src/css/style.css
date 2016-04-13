@@ -173,9 +173,11 @@ footer .info-db {
 /**
 *** PLAYER MOVIE
 */
+/* DO IT */
 /*
 *** SEARCH
 */
+/* SEARCH ICON */
 header .hidden-search-bar {
   display: none; }
 
@@ -185,6 +187,21 @@ header .glyphicon-search {
   position: relative;
   top: 30px; }
 
+header .active-search {
+  background: #34b475;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  top: 18px;
+  left: -12px; }
+
+header .active-search a {
+  position: relative;
+  top: -17px;
+  left: 12px; }
+
+/* SEARCH BAR */
 .nav_pages {
   width: 100%;
   letter-spacing: 3px;

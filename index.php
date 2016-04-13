@@ -21,14 +21,18 @@ else
 	$page = '404';
 
 
-if($q == '' || $q == 'search' || $q == 'movie' || $q == 'player' ){
+if($q == 'search' || $q == 'movie' || $q == 'player'){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';
 include 'views/partials/footer.php';
 }
 
-else{
+else if ($q == '') {
+    include 'views/pages/'.$page.'.php';
+}
+
+else {
     include 'controllers/'.$page.'.php';
     include 'views/pages/'.$page.'.php';
     include 'views/partials/footer.php';

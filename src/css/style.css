@@ -6,13 +6,24 @@ body {
   background-size: cover;
   background-position: center center;
   color: #fefefe;
-  padding: 2% 5%; }
+  padding: 2% 5%;
+  font-family: 'Agenda'; }
 
 header {
   height: 80px; }
 
 header .logo-site {
   width: 140px; }
+
+.logo-landing {
+  width: 360px; }
+
+/**
+*** LANDING PAGE
+*/
+.start-exp {
+  font-size: 18px;
+  color: #fefefe; }
 
 /**
 *** PROGRESS BAR
@@ -70,13 +81,9 @@ header .glyphicon-search {
   color: #fefefe;
   font-size: 25px; }
 
-.img_search {
-  display: inline-block;
-  margin: 0 auto;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 50px; }
-
+/*
+*** SEARCH
+*/
 .nav_pages {
   width: 100%;
   letter-spacing: 3px;

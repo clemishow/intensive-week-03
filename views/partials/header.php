@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title><?= $title ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?= URL?>src/css/fonts.css">
 	<link rel="stylesheet" href="<?= URL?>src/css/style.css">
 </head>
 <body class="page-<?= $class ?>">
@@ -16,12 +17,12 @@
             <div class="col-md-10">
             	<div class="col-md-10"></div>
 		        	<div class="col-md-2">
-		        		<div id="search">
+		        		<div id="right-col">
 					    	<form method="GET" action="<?= URL ?>search">
 					    		<a href="#">
 					    			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 					    		</a>
-					        	<input class="search-bar .hidden-search-bar" type="search" name="keywords">
+					        		<input class="search-bar hidden-search-bar" type="search" name="keywords">
 					        	<input type="submit" class="hide">
 					    	</form>
 					    	<div class="account"></div>

@@ -4,7 +4,8 @@
 
 $color-light: #fefefe;
 $color-dark: #333333;
-
+$font-agenda: 'Agenda';
+$font-proxima: 'Proxima Nova';
 
 body {
   background-image: url('../images/bg.jpg');
@@ -12,6 +13,7 @@ body {
   background-position: center center;
   color: $color-light;
   padding: 2% 5%;
+  font-family: 'Agenda';
 }
 
 header {
@@ -22,6 +24,18 @@ header .logo-site {
   width: 140px;
 }
 
+.logo-landing {
+  width: 360px;
+}
+
+/**
+*** LANDING PAGE
+*/
+
+.start-exp {
+  font-size: 18px;
+  color: $color-light;
+}
 
 /**
 *** PROGRESS BAR
@@ -85,25 +99,21 @@ header .glyphicon-search {
   font-size: 25px;
 }
 
+/*
+*** SEARCH
+*/
+
+
 #search input[type="search"]{
     
 }
 
-.img_search{
-    display: inline-block;
-    margin: 0 auto;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 50px;
-}
-
-.nav_pages{
+.nav_pages {
     width: 100%;
     letter-spacing: 3px;
     text-align: center;
 }
 
-.array{
+.array {
     text-align: left;
-
 }

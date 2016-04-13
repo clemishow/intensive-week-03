@@ -4,31 +4,42 @@
 	$video = $query->fetch();
 ?>
 <section>
-	<?
-	// BARRE DE RECHERCHE
-	?>
-	<?php // require 'views/pages/add-song.php'; ?>
-	<!-- <button class="btn btn-default">EN SAVOIR PLUS</button> -->
 	<div class="row">
 			<div class="col-md-12">
 				<div class="player-controls">
-					<div class="text-center">
-						<a href="javascript:void(0);" onclick="previous();">
-							<img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
-						</a>
-						<a href="javascript:void(0);" onclick="pause();">
-							<img class="icon-player" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
-						</a>
-						<a href="javascript:void(0);" onclick="next();">
-							<img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
-						</a>
-						<div class="container-duration-current-video">
-							<span class="currentTimeVideo"></span> / <span class="durationVideo"></span> 
+					<div class="row">
+						<div class="col-md-3"></div>
+							<div class="col-md-6 text-center">
+								<div class="container-informations-music">
+									<h3 class="song">A Place Among the Stars</h3>
+									<h5 class="artist">Hanz Zamer</h5>
+								</div>
+							</div>
+						<div class="col-md-3"></div>
+					</div>
+					<div class="row">
+						<div class="text-center">
+							<div class="icons-container">
+								<a href="javascript:void(0);" onclick="previous();">
+									<img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
+								</a>
+								<a href="javascript:void(0);" onclick="playPause();">
+									<img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
+								</a>
+								<a href="javascript:void(0);" onclick="next();">
+									<img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
+								</a>
+							</div>
+							<div class="container-duration-current-video">
+								<span class="currentTimeVideo"></span> / <span class="durationVideo"></span> 
+							</div>
 						</div>
 					</div>
-					<div  class="seek-bar-video">
-						<div class="progress-bar-video"></div>
-						<div class="cursor-bar-video"></div>
+					<div class="ro">
+						<div  class="seek-bar-video">
+							<div class="progress-bar-video"></div>
+							<div class="cursor-bar-video"></div>
+						</div>
 					</div>
 				</div>
 			</div>

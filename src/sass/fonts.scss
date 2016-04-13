@@ -9,14 +9,7 @@
         font-style:normal;
     }
 
-    /* Regular italic */
-    @font-face {
-        font-family:'Proxima Nova';
-        src:url(../fonts/ProximaNova/ProximaNova-RegularItalic.otf);
-        font-weight:400;
-    }
-
-    /* Bold normal */
+    /* Bold */
     @font-face {
         font-family:'Proxima Nova';
         src:url(../fonts/ProximaNova/ProximaNova-Bold.otf);
@@ -29,6 +22,7 @@
         font-family:'Proxima Nova';
         src:url(../fonts/ProximaNova/ProximaNova-Light.otf);
         font-weight:300;
+        font-style:normal;
     }
 
 /*
@@ -42,7 +36,7 @@
         font-style:normal;
     }
 
-    /* Bold normal */
+    /* Bold  */
     @font-face {
         font-family:'Agenda';
         src:url(../fonts/Agenda/agenda-bold.TTF);

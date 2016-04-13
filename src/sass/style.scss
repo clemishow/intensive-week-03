@@ -16,13 +16,20 @@ $transition-fast: 150ms all;
 $transition-standard: 300ms all;
 $transition-slow: 600ms all;
 
+/**
+*** GENERAL
+*/
+
 body {
   background-image: url('../images/bg.jpg');
   background-size: cover;
   background-position: center center;
   color: $color-light;
+  font-family: $font-proxima;
+}
+
+.site-wrapper {
   padding: 2% 5%;
-  font-family: 'Agenda';
 }
 
 a:hover {
@@ -31,12 +38,54 @@ a:hover {
   transition: $transition-fast all;
 }
 
+p, a {
+  color: $color-light;
+}
+
+/**
+*** HEADER
+*/
+
 header {
   height: 80px;
 }
 
 header .logo-site {
   width: 140px;
+}
+
+/**
+*** FOOTER
+*/
+
+footer {
+  width: 100%;
+  height: 50px;
+  background: $color-dark;
+  position: absolute; 
+    bottom: 0;
+}
+
+footer .legal,
+footer .logo-db{
+  font-size: 12px;
+  color: #d3d3d3;
+  position: relative;
+  top: 15px;
+}
+
+footer .logo-db {
+  width: 37px;
+  float: right;
+  left: 17px;
+}
+
+footer .info-db {
+  font-size: 11px;
+  position: relative;
+  top: 18px;
+  float: left;
+  color: #d3d3d3;
 }
 
 /**
@@ -77,11 +126,11 @@ header .logo-site {
 }
 
 /**
-*** PLAYER
+*** PLAYER INDEX
 */
 
-.icon-player {
-  width: 16px;
+.player-controls {
+  margin-top: 35vh;
 }
 
 /* PROGRESS BAR */
@@ -123,8 +172,6 @@ header .logo-site {
   width: 9px;
   height: 19px;
   background: $color-dominant;
-  position: absolute;
-    top: -2.5px;
   margin-left: -4px;
   -webkit-transform: scale(0);
      -moz-transform: scale(0);
@@ -132,8 +179,46 @@ header .logo-site {
      -o-transform: scale(0);
       transform: scale(0);
   z-index: 10;
+  position: absolute;
+  top: -2.5px;
 }
 
+/* CONTROLS + INFOS */
+
+.player-controls .icons-container a {
+  padding: 15px;
+}
+
+.player-controls .container-informations-music {
+  position: relative;
+  bottom: 65px;
+}
+
+.player-controls .container-informations-music .song {
+  font-weight: 600;
+}
+
+.player-controls .icon-player {
+  width: 24px;
+  position: relative;
+  bottom: 40px;
+}
+
+.player-controls .container-duration-current-video {
+  position: relative;
+  bottom: 10px;
+}
+
+.player-controls .currentTimeVideo,
+.player-controls .durationVideo {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+/**
+*** PLAYER MOVIE
+*/
 
 /*
 *** SEARCH
@@ -146,6 +231,8 @@ header .hidden-search-bar {
 header .glyphicon-search {
   color: $color-light;
   font-size: 25px;
+  position: relative;
+  top: 30px;
 }
 
 #search input[type="search"]{
@@ -160,4 +247,17 @@ header .glyphicon-search {
 
 .array {
     text-align: left;
+}
+
+/*
+****
+***** MEDIAS QUERIES RESPONSIVE
+****
+**/
+
+@media screen and (max-width: 640px) {
+  .bloc {
+    display:block;
+    clear:both;
+  }
 }

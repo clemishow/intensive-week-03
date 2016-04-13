@@ -4,24 +4,64 @@ iframe {
 /* COLORS */
 /* FONTS */
 /* TRANSITIONS */
+/**
+*** GENERAL
+*/
 body {
   background-image: url("../images/bg.jpg");
   background-size: cover;
   background-position: center center;
   color: #fefefe;
-  padding: 2% 5%;
-  font-family: 'Agenda'; }
+  font-family: "Proxima Nova"; }
+
+.site-wrapper {
+  padding: 2% 5%; }
 
 a:hover {
   text-decoration: none;
   color: #34b475;
   transition: 150ms all all; }
 
+p, a {
+  color: #fefefe; }
+
+/**
+*** HEADER
+*/
 header {
   height: 80px; }
 
 header .logo-site {
   width: 140px; }
+
+/**
+*** FOOTER
+*/
+footer {
+  width: 100%;
+  height: 50px;
+  background: #252525;
+  position: absolute;
+  bottom: 0; }
+
+footer .legal,
+footer .logo-db {
+  font-size: 12px;
+  color: #d3d3d3;
+  position: relative;
+  top: 15px; }
+
+footer .logo-db {
+  width: 37px;
+  float: right;
+  left: 17px; }
+
+footer .info-db {
+  font-size: 11px;
+  position: relative;
+  top: 18px;
+  float: left;
+  color: #d3d3d3; }
 
 /**
 *** LANDING PAGE
@@ -54,10 +94,10 @@ header .logo-site {
     transition: 300ms all all; }
 
 /**
-*** PLAYER
+*** PLAYER INDEX
 */
-.icon-player {
-  width: 16px; }
+.player-controls {
+  margin-top: 35vh; }
 
 /* PROGRESS BAR */
 .player-controls .seek-bar-video {
@@ -95,16 +135,44 @@ header .logo-site {
   width: 9px;
   height: 19px;
   background: #34b475;
-  position: absolute;
-  top: -2.5px;
   margin-left: -4px;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
   -o-transform: scale(0);
   transform: scale(0);
-  z-index: 10; }
+  z-index: 10;
+  position: absolute;
+  top: -2.5px; }
 
+/* CONTROLS + INFOS */
+.player-controls .icons-container a {
+  padding: 15px; }
+
+.player-controls .container-informations-music {
+  position: relative;
+  bottom: 65px; }
+
+.player-controls .container-informations-music .song {
+  font-weight: 600; }
+
+.player-controls .icon-player {
+  width: 24px;
+  position: relative;
+  bottom: 40px; }
+
+.player-controls .container-duration-current-video {
+  position: relative;
+  bottom: 10px; }
+
+.player-controls .currentTimeVideo,
+.player-controls .durationVideo {
+  font-size: 18px;
+  font-weight: 300; }
+
+/**
+*** PLAYER MOVIE
+*/
 /*
 *** SEARCH
 */
@@ -113,7 +181,9 @@ header .hidden-search-bar {
 
 header .glyphicon-search {
   color: #fefefe;
-  font-size: 25px; }
+  font-size: 25px;
+  position: relative;
+  top: 30px; }
 
 .nav_pages {
   width: 100%;
@@ -122,5 +192,15 @@ header .glyphicon-search {
 
 .array {
   text-align: left; }
+
+/*
+****
+***** MEDIAS QUERIES RESPONSIVE
+****
+**/
+@media screen and (max-width: 640px) {
+  .bloc {
+    display: block;
+    clear: both; } }
 
 /*# sourceMappingURL=style.css.map */

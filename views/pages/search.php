@@ -1,5 +1,5 @@
 <?
-// BARRE DE RECHERCHE
+$active = 'active';
 ?>   
 
 <div id="search">

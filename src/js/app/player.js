@@ -1,4 +1,5 @@
-	var player_container = {};
+	var player_container = {},
+		state_video		 = 0;
 
 	player_container.controls 					= document.querySelector('.player-controls');
 	player           							= document.querySelector('#player');
@@ -8,7 +9,8 @@
 	player_container.controls.seek_bar 		  	= player_container.controls.querySelector('.seek-bar-video');
 	player_container.controls.cursor_bar	 	= player_container.controls.querySelector('.cursor-bar-video');
 	player_container.controls.progress_bar 	  	= player_container.controls.querySelector('.progress-bar-video');
-
+	/* ICONS */
+	player_icon_play							= player_container.controls.querySelector('.icon-play');
 
 	var tag = document.createElement('script');
 	tag.src = "https://www.youtube.com/iframe_api";
@@ -37,6 +39,7 @@ function onPlayerReady(event) {
 	setInterval(function(){progressBar();},100);
 	setInterval(function(){getCurrentTimeVideo();},100);
 	event.target.playVideo();
+	state_video = 1;
 	event.target.setVolume(0);
 	$('.loader').css('opacity', '0');
 	setInterval(function(){$('.loader').css('display', 'none');},300)
@@ -54,15 +57,21 @@ function onPlayerError() {
 	console.log('ERROR');
 }
 
-function play() {
-  if (player) {
-    player.playVideo();
-  }
-}
-
-function pause() {
-  if (player) {
+function playPause() {
+  if (player && state_video == 1) {
     player.pauseVideo();
+    player_icon_play.src="http://localhost/intensive-week-03/src/images/icon-play.svg";
+    setTimeout(function(){
+  		state_video = 0;
+  	},300);
+  }
+
+  else if (player && state_video == 0) {
+  	player.playVideo();
+  	player_icon_play.src="http://localhost/intensive-week-03/src/images/icon-pause.svg";
+  	setTimeout(function(){
+  		state_video = 1;
+  	},300);
   }
 }
 
@@ -117,21 +126,21 @@ function progressBar() {
 	player_container.controls.cursor_bar.style.left = progress_ratio_percent + '%';
 }
 
-function dragProgressbar(e) {
-	var ratio = (e.clientX - player.offsetLeft) / player_container.controls.seek_bar.offsetWidth;
-	var current = ratio * player.getDuration();
-	player.seekTo(current);
-	player_container.controls.progress_bar.style.webkitTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.mozTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.msTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.oTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.transform = 'scaleX' + ratio + ')';
-	player_container.controls.cursor_bar.style.webkitTransform = 'scale(1)';
-	player_container.controls.cursor_bar.style.mozTransform = 'scale(1)';
-	player_container.controls.cursor_bar.style.msTransform = 'scale(1)';
-	player_container.controls.cursor_bar.style.oTransform = 'scale(1)';
-	player_container.controls.cursor_bar.style.transform = 'scale(1)';
-}
+// function dragProgressbar(e) {
+// 	var ratio = (e.clientX - player.offsetLeft) / player_container.controls.seek_bar.offsetWidth;
+// 	var current = ratio * player.getDuration();
+// 	player.seekTo(current);
+// 	player_container.controls.progress_bar.style.webkitTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.mozTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.msTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.oTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.transform = 'scaleX' + ratio + ')';
+// 	player_container.controls.cursor_bar.style.webkitTransform = 'scale(1)';
+// 	player_container.controls.cursor_bar.style.mozTransform = 'scale(1)';
+// 	player_container.controls.cursor_bar.style.msTransform = 'scale(1)';
+// 	player_container.controls.cursor_bar.style.oTransform = 'scale(1)';
+// 	player_container.controls.cursor_bar.style.transform = 'scale(1)';
+// }
 
 player_container.controls.seek_bar.addEventListener('click', function(e) {
 var	bounding_rect = player_container.controls.seek_bar.getBoundingClientRect(),
@@ -141,28 +150,28 @@ var	bounding_rect = player_container.controls.seek_bar.getBoundingClientRect(),
 player.seekTo(time);
 });
 
-// DRAG ON PROGRESS BAR
-player_container.controls.seek_bar.addEventListener('mousedown', function(e) {
-	// if (!player.video.paused) player.video.pause();
-	var ratio = (e.clientX - player.offsetLeft) / player_container.controls.seek_bar.offsetWidth;
-	var current = ratio * player.getDuration();
-	player.seekTo(current);
-	player_container.controls.progress_bar.style.webkitTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.mozTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.msTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.oTransform = 'scaleX' + ratio + ')';
-	player_container.controls.progress_bar.style.transform = 'scaleX' + ratio + ')';
-	document.addEventListener('mousemove', dragProgressbar);
-	document.addEventListener('mouseup', function() {
-		player_container.controls.cursor_bar.style.webkitTransform = 'scale(0)';
-		player_container.controls.cursor_bar.style.mozTransform = 'scale(0)';
-		player_container.controls.cursor_bar.style.msTransform = 'scale(0)';
-		player_container.controls.cursor_bar.style.oTransform = 'scale(0)';
-		player_container.controls.cursor_bar.style.transform = 'scale(0)';
-		document.removeEventListener('mousemove', dragProgressbar);
-		play();
-	});
-});
+// // DRAG ON PROGRESS BAR
+// player_container.controls.seek_bar.addEventListener('mousedown', function(e) {
+// 	// if (!player.video.paused) player.video.pause();
+// 	var ratio = (e.clientX - player.offsetLeft) / player_container.controls.seek_bar.offsetWidth;
+// 	var current = ratio * player.getDuration();
+// 	player.seekTo(current);
+// 	player_container.controls.progress_bar.style.webkitTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.mozTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.msTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.oTransform = 'scaleX' + ratio + ')';
+// 	player_container.controls.progress_bar.style.transform = 'scaleX' + ratio + ')';
+// 	document.addEventListener('mousemove', dragProgressbar);
+// 	document.addEventListener('mouseup', function() {
+// 		player_container.controls.cursor_bar.style.webkitTransform = 'scale(0)';
+// 		player_container.controls.cursor_bar.style.mozTransform = 'scale(0)';
+// 		player_container.controls.cursor_bar.style.msTransform = 'scale(0)';
+// 		player_container.controls.cursor_bar.style.oTransform = 'scale(0)';
+// 		player_container.controls.cursor_bar.style.transform = 'scale(0)';
+// 		document.removeEventListener('mousemove', dragProgressbar);
+// 		play();
+// 	});
+// });
 
 // HOVER PROGRESS BAR
 player_container.controls.seek_bar.addEventListener('mouseover', function() {

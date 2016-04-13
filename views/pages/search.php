@@ -68,17 +68,33 @@ if(!empty($search)){ //SI L'UTILISATEUR A FAIT UNE RECHERCHE
 // CRÉATION HTML D'UNE DIV POUR CHAQUE FILM RESULTANT DE LA RECHERCHE
 ?>  
 
-<div class="col-md-4">
-    <div class="img_search">
+<?
+if($i%4==0){
+?>
+<div class="row">
+<?
+}
+?>
+
+    <div class="col-md-3">
         <? $index_movie = $response->results[$i]->id //SAUVEGARDE L'ID DU FILM ?>
         <div>
             <a href="<?= URL ?>movie&id=<?=$index_movie?>">
-                <img class="img-responsive" src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt="">
-            </a>  
+                <img class="img-responsive" src="http://image.tmdb.org/t/p/w500<?= $response->results[$i]->poster_path ?>" alt="img-film">
+            </a>
         </div>
         <h3><?= $response->results[$i]->title //AFFICHE LE TITRE DU FILM ?></h3>
     </div>
+
+<?
+if($i%4==3){
+?>
 </div>
+<?
+}
+?>
+
+
 <? } ?>
 
 <?php 

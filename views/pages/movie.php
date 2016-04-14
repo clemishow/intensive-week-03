@@ -43,10 +43,6 @@ $credits = json_decode($credits);
 
 ?>
 <div>
-    <div class="cross">
-        <div class="cross-line-1"></div>
-        <div class="cross-line-2"></div>
-    </div>
     <div class="row">
         <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>'); background-repeat: no-repeat; background-size: cover;">
             <div class="col-md-4 col-xs-2"></div>

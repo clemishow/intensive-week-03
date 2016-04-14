@@ -42,8 +42,7 @@ $credits = json_decode($credits);
 //var_dump($credits);
 
 ?>
-<div>
-    <div class="cross">
+    <div class="cross-container">
         <div class="cross-line-1"></div>
         <div class="cross-line-2"></div>
     </div>
@@ -174,4 +173,3 @@ $credits = json_decode($credits);
         </div>
     </div>
     <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER</a>
-</div>

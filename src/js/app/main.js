@@ -68,10 +68,11 @@ $('.container-account .account-nav').on('click', function(){
 $('.button-player-left').on('click', function(){
 	$('#movie-details').removeClass('hidden-movie-details');
 	$('footer').css('display', 'none');
+	$('.site-wrapper').css('display', 'none');
 });
 
-$('.cross').on('click', function(){
+$(document.body).on('click', '.cross-container' ,function(){
 	$('#movie-details').addClass('hidden-movie-details');
+	$('.site-wrapper').css('display', 'block');
 });
-
 

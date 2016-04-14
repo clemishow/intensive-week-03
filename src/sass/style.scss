@@ -323,10 +323,6 @@ footer .info-db {
 
 /* SEARCH ICON */
 
-header .hidden-search-bar {
-  display: none;
-}
-
 header .icon-search {
   width: 24px;
   position: relative;
@@ -430,7 +426,18 @@ header .active-search a {
 
 /* MODAL */
 
-.page-movie .cross {
+header .hidden-search-bar {
+  display: none;
+}
+
+#movie-details {
+  background-color: white; 
+  width: 100vw;
+  height: auto;
+}
+
+
+.page-movie .cross-container {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -608,12 +615,6 @@ header .active-search a {
 
 .hidden-movie-details {
   display: none;
-}
-
-#movie-details {
-  background-color: white; 
-  width: 100vw;
-  height: auto;
 }
 
 /*

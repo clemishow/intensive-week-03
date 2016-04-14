@@ -32,14 +32,14 @@ else if ($q == 'add-song')
 else 
 	$page = '404';
 
-if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song' ){
+if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song' || $q == 'movie' ){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';
 include 'views/partials/footer.php';
 }
 
-else if ($q == '' || $q == 'logout' || $q == 'movie' || $q == 'movie-player') {
+else if ($q == '' || $q == 'logout' || $q == 'movie-player') {
     include 'views/pages/'.$page.'.php';
 }
 

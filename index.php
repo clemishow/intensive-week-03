@@ -30,7 +30,7 @@ else
 	$page = '404';
 
 
-if($q == 'search' || $q == 'movie' || $q == 'player' || $q == 'account'){
+if($q == 'search' || $q == 'movie' || $q == 'player' || $q == 'account' || $q == 'add-song'){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';

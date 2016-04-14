@@ -42,9 +42,43 @@ $credits = json_decode($credits);
 //var_dump($credits);
 
 ?>
+<?php
+
+$movie     = $_GET['id'];
+$query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
+$video     = $query->fetch();
+
+?>
     <div class="cross-container">
         <div class="cross-line-1"></div>
         <div class="cross-line-2"></div>
+    </div>
+    <div class="player-controls player-bottom">
+        <div class="row">
+            <div class="col-xs-4"></div>
+                <div class="col-xs-4 text-center">
+                    <div class="row">
+                        <div class="icons-container">
+                            <a href="<?= URL ?>player?id=<?= $movie//$pre_movie_id?>" onclick="previous();">
+                                <img class="icon-player" src="<? URL ?>src/images/icon-previous-black.svg" alt="previous">
+                            </a>
+                            <a href="javascript:void(0);" onclick="playPause();">
+                                <img class="icon-player icon-play-bottom" src="<? URL ?>src/images/icon-pause-black.svg" alt="pause">
+                            </a>
+                            <? //$next_movie_id = next_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab); ?>
+                            <a href="<?= URL ?>player?id=<?= $movie//$next_movie_id?>" onclick="next();">
+                                <img class="icon-player" src="<? URL ?>src/images/icon-next-black.svg" alt="next">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="container-informations-music text-center">
+                            <span><h3 class="song"><?= $video->song ?> –<?= $video->artist ?></h3></span>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-xs-4"></div>    
+        </div>
     </div>
     <div class="row">
         <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>'); background-repeat: no-repeat; background-size: cover;">
@@ -172,4 +206,4 @@ $credits = json_decode($credits);
             </div>
         </div>
     </div>
-    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER</a>
+    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER UNE MUSIQUE</a>

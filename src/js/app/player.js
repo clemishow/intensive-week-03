@@ -50,11 +50,11 @@ function onPlayerPlaybackQualityChange(event) {
 }
 
 function onPlayerStateChange() {
-	console.log('CHANGE');
+	// CHANGE
 }
 
 function onPlayerError() {
-	console.log('ERROR');
+	// ERROR
 }
 
 function playPause() {

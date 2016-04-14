@@ -76,3 +76,19 @@ $(document.body).on('click', '.cross-container' ,function(){
 	$('.site-wrapper').css('display', 'block');
 });
 
+$(document.body).on('click', '.icon-play-bottom' ,function(){
+	if (state_video == 1) {
+		$('.icon-play-bottom').attr("src","http://localhost/intensive-week-03/src/images/icon-play-black.svg");
+		setTimeout(function(){
+	  		state_video = 0;
+	  	},300);
+	}
+
+	else if (state_video == 0) {
+		$('.icon-play-bottom').attr("src","http://localhost/intensive-week-03/src/images/icon-pause-black.svg");
+		setTimeout(function(){
+	  		state_video = 1;
+	  	},300);
+	}
+});
+

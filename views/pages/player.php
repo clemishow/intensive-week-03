@@ -1,4 +1,10 @@
 <?php
+
+echo '<pre>';
+print_r($counter_pre_id);
+print_r($pre_id_movie_tab);
+echo '</pre>';
+
 if(!empty($_GET['id'])){
     $movie = $_GET['id'];
 }
@@ -7,7 +13,7 @@ else{
 }
 $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video      = $query->fetch();
-$pre_movie_id  = 0;
+$pre_movie_id  = $movie;
 $next_movie_id = 0;
 
 ?>
@@ -32,7 +38,7 @@ $next_movie_id = 0;
                             <a href="javascript:void(0);">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
                             </a>
-                            <? $pre_movie_id = pre_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab); ?>
+                            <? $pre_movie_id = pre_id_movie($counter_pre_id, $pre_id_movie_tab); ?>
                             <a href="<?= URL ?>player?id=<?= $pre_movie_id?>" onclick="previous();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
                             </a>

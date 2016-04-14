@@ -3,14 +3,15 @@
 $pre_id_movie_tab = [];
 $counter_pre_id = 0;
 
+
+
 /*
 *** PRECEDENT ID MOVIE
 **/
 
 
 function pre_id_movie($counter_pre_id, $pre_id_movie_tab){
-
-    //echo $counter_pre_id;
+    
     
     if($counter_pre_id > 1){
         $movie_id = $pre_id_movie_tab[$counter_pre_id - 2];
@@ -27,7 +28,8 @@ function pre_id_movie($counter_pre_id, $pre_id_movie_tab){
 **/
 
 function random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab) {
-
+    
+    
     if($counter_pre_id == 0){
 
         do{
@@ -63,7 +65,8 @@ function random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab) {
 **/
 
 function next_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab){
-
+    
+    
     if($counter_pre_id == count($pre_id_movie_tab)){
         $movie_id = random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab);
     }

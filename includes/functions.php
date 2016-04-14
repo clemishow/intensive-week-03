@@ -9,7 +9,7 @@ function random_id_movie($pdo) {
 
     do{
         
-        $movie_id   = mt_rand ( 0 , 100 );
+        $movie_id   = mt_rand ( 0 , 16000 );
         $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
         $video      = $query->fetch();
         
@@ -34,7 +34,7 @@ $artist = '';
 if(!empty($_POST['submitUrl'])) {
 
     $url 	= strip_tags(trim($_POST['url']));
-    $url    = get_youtube_id_from_url($url);
+//    $url    = get_youtube_id_from_url($url);
     $song   = strip_tags(trim($_POST['song']));
     $artist = strip_tags(trim($_POST['artist']));
     $id_movie = $_GET['id'];
@@ -73,12 +73,12 @@ if(!empty($_POST['submitUrl'])) {
 
 }
 
-function get_youtube_id_from_url($url) {
-    if (stristr($url,'youtu.be/'))
-    {preg_match('/(https:|http:|)(\/\/www\.|\/\/|)(.*?)\/(.{11})/i', $url, $final_ID); return $final_ID[4]; }
-    else 
-    {@preg_match('/(https:|http:|):(\/\/www\.|\/\/|)(.*?)\/(embed\/|watch.*?v=|)([a-z_A-Z0-9\-]{11})/i', $url, $IDD); return $IDD[5]; }
-}
+//function get_youtube_id_from_url($url) {
+//    if (stristr($url,'youtu.be/'))
+//    {preg_match('/(https:|http:|)(\/\/www\.|\/\/|)(.*?)\/(.{11})/i', $url, $final_ID); return $final_ID[4]; }
+//    else 
+//    {@preg_match('/(https:|http:|):(\/\/www\.|\/\/|)(.*?)\/(embed\/|watch.*?v=|)([a-z_A-Z0-9\-]{11})/i', $url, $IDD); return $IDD[5]; }
+//}
 
 /* 
 *** LOGIN SCRIPT 

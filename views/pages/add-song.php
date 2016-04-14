@@ -26,7 +26,7 @@
 					<form action="" method="post">
 						<div class="form-group">
 							<label for="url">URL :</label>
-							<input id="url" type="url" name="url" class="form-control" value="<?= $url ?>">
+							<input id="url" type="text" name="url" class="form-control" value="<?= $url ?>">
 						</div>
 						<div class="form-group">
 							<label for="song">Titre du son :</label>

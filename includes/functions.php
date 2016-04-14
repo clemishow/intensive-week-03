@@ -1,8 +1,9 @@
 <?php
 
-$pre_id_movie_tab = [];
-$counter_pre_id = 0;
-
+if(!isset($id_movie_tab) && !isset($counter_id)){
+    $id_movie_tab = [];
+    $counter_id = 0;
+}
 
 
 /*
@@ -10,16 +11,20 @@ $counter_pre_id = 0;
 **/
 
 
-function pre_id_movie($counter_pre_id, $pre_id_movie_tab){
-    
-    
-    if($counter_pre_id > 1){
-        $movie_id = $pre_id_movie_tab[$counter_pre_id - 2];
+function pre_id_movie($counter_id, $id_movie_tab){
+
+
+    if($counter_id > 1){
+        $movie_id = $id_movie_tab[$counter_id - 2];
         $counter_pre_id--;
-        
+
         return $movie_id;
     }
-    
+    else{
+        $movie_id = $_GET['id'];
+        return $movie_id;
+    }
+
 }
 
 
@@ -27,10 +32,11 @@ function pre_id_movie($counter_pre_id, $pre_id_movie_tab){
 *** RANDOM ID MOVIE
 **/
 
-function random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab) {
-    
-    
-    if($counter_pre_id == 0){
+function random_id_movie($pdo, $counter_id, $id_movie_tab) {
+
+    //echo $counter_pre_id;
+
+    if($counter_id == 0){
 
         do{
 
@@ -48,13 +54,13 @@ function random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab) {
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
-        }while(empty($video->url) && $movie_id != $pre_id_movie_tab[$counter_pre_id - 1]);
+        }while(empty($video->url) && $movie_id != $id_movie_tab[$counter_id - 1]);
 
     }
 
-    $pre_id_movie_tab[$counter_pre_id] = $movie_id;
-    $counter_pre_id++;
-    
+    $id_movie_tab[$counter_id] = $movie_id;
+    $counter_id++;
+
 
     return $movie_id;
 }
@@ -64,15 +70,16 @@ function random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab) {
 *** NEXT ID MOVIE
 **/
 
-function next_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab){
-    
-    
-    if($counter_pre_id == count($pre_id_movie_tab)){
-        $movie_id = random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab);
+function next_id_movie($pdo, $counter_id, $id_movie_tab){
+
+
+    if($counter_id == count($id_movie_tab)){
+        $movie_id = random_id_movie($pdo, $counter_id, $id_movie_tab);
     }
 
     else{
-        $movie_id = $pre_id_movie_tab[$counter_pre_id];
+        $movie_id = $id_movie_tab[$counter_id];
+        $counter_id++;
     }
 
     return $movie_id;

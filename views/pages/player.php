@@ -5,6 +5,11 @@ $query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video     = $query->fetch();
 
 ?>
+<? 
+
+//$pre_movie_id = pre_id_movie($counter_pre_id, $pre_id_movie_tab); 
+?>
+
 <section>
     <div class="row">
         <div class="col-md-12">
@@ -25,15 +30,15 @@ $video     = $query->fetch();
                             <a href="javascript:void(0);">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
                             </a>
-                            <? //$pre_movie_id = pre_id_movie($counter_pre_id, $pre_id_movie_tab); ?>
-                            <a href="<?= URL ?>player?id=<?= //$pre_movie_id?>" onclick="previous();">
+
+                            <a href="<?= URL ?>player?id=<?= $movie//$pre_movie_id?>" onclick="previous();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
                             </a>
                             <a href="javascript:void(0);" onclick="playPause();">
                                 <img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
                             </a>
                             <? //$next_movie_id = next_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab); ?>
-                            <a href="<?= URL ?>player?id=<?= //$next_movie_id?>" onclick="next();">
+                            <a href="<?= URL ?>player?id=<?= $movie//$next_movie_id?>" onclick="next();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
                             </a>
                             <a href="<?= URL ?>movie?id=<?= $movie?>;">

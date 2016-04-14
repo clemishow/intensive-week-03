@@ -18,5 +18,4 @@ $('.container-account .account-nav').on('click', function(){
 		$('.container-account .container-nav').css('display', 'none');
 		setTimeout(function(){state_nav = 0}, 300);
 	}
-	
 });

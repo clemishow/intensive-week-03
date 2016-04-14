@@ -27,6 +27,7 @@ body {
   color: $color-light;
   font-family: $font-proxima;
   border-top: 6px solid $color-dominant;
+  overflow-x: hidden;
 }
 
 .page-search-site,
@@ -432,22 +433,64 @@ header .active-search a {
 
 .page-movie {
   background: $color-light;
+  color: $color-dark;
+}
+
+.page-movie p {
+  color: $color-dark;
 }
 
 .page-movie .header-movie {
   width: 100%;
-  height: 400px;
+  height: 30vh;
   overflow: hidden;
 }
 
-.page-movie .header-movie .img-header {
+.page-movie .header-movie .container-title-movie {
+  color: $color-light;
+  font-family: $font-agenda;
+  text-transform: uppercase;
+  z-index: 3;
+  margin-top: 90px;
+  position: absolute;
+}
+
+.page-movie .container-poster {
   width: 100%;
-  
+  position: relative;
+  top: -150px;
+}
+
+.page-movie .container-poster img {
+  width: 100%;
+}
+
+.page-movie .header-movie .img-header {
+  width: 120%;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  position: relative;
+  left: -10%;
+  top: -5%;
 }
 
 .page-movie .site-wrapper {
   padding: 0;
 }
+
+.page-movie .container-informations-movie {
+  padding: 2% 5%;
+}
+
+.page-movie .container-description-movie {
+  margin-top: 30px;
+
+}
+
+
 
 /*
 ****

@@ -14,7 +14,8 @@ body {
   background-position: center center;
   color: #fefefe;
   font-family: "Proxima Nova";
-  border-top: 6px solid #34b475; }
+  border-top: 6px solid #34b475;
+  overflow-x: hidden; }
 
 .page-search-site,
 .page-account {
@@ -346,18 +347,52 @@ header .active-search a {
   display: none; }
 
 .page-movie {
-  background: #fefefe; }
+  background: #fefefe;
+  color: #252525; }
+
+.page-movie p {
+  color: #252525; }
 
 .page-movie .header-movie {
   width: 100%;
-  height: 400px;
+  height: 30vh;
   overflow: hidden; }
 
-.page-movie .header-movie .img-header {
+.page-movie .header-movie .container-title-movie {
+  color: #fefefe;
+  font-family: "Agenda";
+  text-transform: uppercase;
+  z-index: 3;
+  margin-top: 90px;
+  position: absolute; }
+
+.page-movie .container-poster {
+  width: 100%;
+  position: relative;
+  top: -150px; }
+
+.page-movie .container-poster img {
   width: 100%; }
+
+.page-movie .header-movie .img-header {
+  width: 120%;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  position: relative;
+  left: -10%;
+  top: -5%; }
 
 .page-movie .site-wrapper {
   padding: 0; }
+
+.page-movie .container-informations-movie {
+  padding: 2% 5%; }
+
+.page-movie .container-description-movie {
+  margin-top: 30px; }
 
 /*
 ****

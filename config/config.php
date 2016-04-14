@@ -2,6 +2,9 @@
 	// URL
 	define('URL','http://localhost/intensive-week-03/');
 
+	// SALT
+	define('SALT', '69z2EiQ0yglzQ');
+
 	// DB CONNEXION
 	define('DB_HOST','localhost');
 	define('DB_NAME','intensive-week');

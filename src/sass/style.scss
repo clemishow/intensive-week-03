@@ -452,7 +452,7 @@ header .active-search a {
 }
 
 .page-movie .header-movie {
-  width: 100%;
+  width: 120%;
   height: 40vh;
   overflow: hidden;
 }
@@ -563,14 +563,15 @@ header .active-search a {
   color: $color-dark;
 }
 
-.page-movie .playlist li {
-  margin-bottom: 60px;
+.page-movie .playlist .row {
+  margin-bottom: 30px;
 }
 
 .page-movie .add-song {
   position: fixed;
   bottom: 50px;
   right: 50px;
+  color: $color-dark;
 }
 
 /*

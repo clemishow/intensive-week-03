@@ -44,7 +44,7 @@ $credits = json_decode($credits);
 ?>
 <div>
     <div class="row">
-        <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>')">
+        <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>'); background-repeat: no-repeat; background-size: cover;">
             <div class="col-md-4 col-xs-2"></div>
                 <div class="col-md-6 col-xs-8 text-center-responsive">
                     <div class="container-informations">
@@ -107,9 +107,8 @@ $credits = json_decode($credits);
             </div>
              <div class="row">
                 <h3>Bandes sons</h3>
-                <ul class="playlist">
-                    <li>
-                            
+                <div class="playlist">
+                    <div class="row">
                         <div class="col-md-1">
                             <a href="javascript:void(0);">
                                 <div class="container-icon-play">
@@ -126,9 +125,9 @@ $credits = json_decode($credits);
                                 HANS ZIMMER
                             </div> 
                         </div>
-                    </li>
+                    </div>
 
-                    <li>
+                    <div class="row">
                         <span>
                             <a href="javascript:void(0);">
                                 <div class="col-md-1">
@@ -146,9 +145,9 @@ $credits = json_decode($credits);
                                 HANS ZIMMER
                             </div> 
                         </div>
-                    </li>
+                    </div>
 
-                    <li>
+                    <div class="row">
                         <span>
                             <a href="javascript:void(0);">
                                 <div class="col-md-1">
@@ -166,10 +165,10 @@ $credits = json_decode($credits);
                                 HANS ZIMMER
                             </div> 
                         </div>
-                    </li>
+                    </div>
 
                     
-                </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -180,7 +179,3 @@ $credits = json_decode($credits);
     </section>
     
 </div>
-
-
-
-

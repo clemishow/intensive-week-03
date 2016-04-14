@@ -427,6 +427,8 @@ header .active-search a {
 *** PAGE MOVIE
 */
 
+/* GENERAL */
+
 .page-movie header{
   display: none;
 }
@@ -440,30 +442,22 @@ header .active-search a {
   color: $color-dark;
 }
 
+.page-movie h3 {
+  color: $color-dark;
+  font-family: $font-agenda;
+  font-weight: 600;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
 .page-movie .header-movie {
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   overflow: hidden;
 }
 
-.page-movie .header-movie .container-title-movie {
-  color: $color-light;
-  font-family: $font-agenda;
-  text-transform: uppercase;
-  z-index: 3;
-  margin-top: 90px;
-  position: absolute;
-}
-
-.page-movie .container-poster {
-  width: 100%;
-  position: relative;
-  top: -150px;
-}
-
-.page-movie .container-poster img {
-  width: 100%;
-}
+/* HEADER */
 
 .page-movie .header-movie .img-header {
   width: 120%;
@@ -477,9 +471,47 @@ header .active-search a {
   top: -5%;
 }
 
+.page-movie .header-movie .container-informations {
+      margin-top: 160px;
+}
+
+.page-movie .header-movie .container-title-movie h3 {
+  color: $color-light;
+  z-index: 3;
+  position: absolute;
+}
+
+.page-movie .header-movie .container-date-movie span {
+  color: $color-light;
+  font-family: $font-agenda;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.page-movie .header-movie .container-genre-movie {
+  color: $color-light;
+  font-family: $font-agenda;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* POSTER */
+
+.page-movie .container-poster {
+  width: 100%;
+  position: relative;
+  top: -150px;
+}
+
+.page-movie .container-poster img {
+  width: 100%;
+}
+
 .page-movie .site-wrapper {
   padding: 0;
 }
+
+/* CONTENT */
 
 .page-movie .container-informations-movie {
   padding: 2% 5%;
@@ -487,8 +519,25 @@ header .active-search a {
 
 .page-movie .container-description-movie {
   margin-top: 30px;
-
 }
+
+.page-movie .container-description-movie h4 {
+ font-family: $font-agenda;
+ font-weight: 600;
+ font-size: 26px;
+}
+
+.page-movie .casting-informations {
+  position: relative;
+  top: -100px;
+}
+
+.page-movie .casting-informations ul li {
+  margin-bottom: 30px;
+}
+
+
+
 
 
 
@@ -498,9 +547,10 @@ header .active-search a {
 ****
 **/
 
-@media screen and (max-width: 640px) {
-  .bloc {
-    display:block;
-    clear:both;
+@media screen and (max-width: 768px) {
+  /* PAGE MOVIE */
+  .page-movie .header-movie .text-center-responsive {
+    text-align: center;
   }
+    
 }

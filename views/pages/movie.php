@@ -45,37 +45,83 @@ $credits = json_decode($credits);
 <div>
     <div class="row">
         <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>')">
-            <div class="col-md-4 col-xs-1"></div>
-                <div class="col-md-6 col-xs-10">
-                    <div class="container-title-movie">
-                        <h3><?= $response->title ?></h3>
+            <div class="col-md-4 col-xs-2"></div>
+                <div class="col-md-6 col-xs-8 text-center-responsive">
+                    <div class="container-informations">
+                        <div class="container-date-movie">
+                            <span>2014</span>
+                        </div>
+                        <div class="container-title-movie">
+                            <h3><?= $response->title ?></h3>
+                        </div>
+                        <div class="container-genre-movie">
+                            <span>Drama - Horror</span>
+                        </div>
                     </div>
                 </div>
-            <div class="col-md-2 col-xs-1"></div>
+            <div class="col-md-2 col-xs-2"></div>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1 col-xs-3"></div>
-            <div class="col-md-3 col-xs-6">
+        <div class="col-md-1 col-xs-2"></div>
+            <div class="col-md-3 col-xs-8">
                 <div class="container-poster">
                     <img class="img-responsive" src="http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>" alt="poster-film">
                 </div>
-                <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        
+                <div class="col-md-12">
+                    <div class="casting-informations">
+                       <h3>Casting</h3> 
+                       <ul>
+                           <li>Joseph Cooper</li>
+                           <li>Murphy Cooper</li>
+                           <li>Amelia Brand</li>
+                       </ul>
                     </div>
-                <div class="col-md-4"></div>
+                </div>
             </div>
         <div class="col-md-8 col-xs-12">
-            <div class="container-description-movie">
-                <h4>SYNOPSIS</h4>
+            <div class="row container-description-movie">
+                <h3>Synopsis</h3>
                 <p><?= $response->overview ?></p>
+            </div>
+             <div class="row">
+                <h3>Bandes sons</h3>
+                <ul>
+                    <li>
+                        <span>
+                            <a href="javascript:void(0);">
+                                <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
+                            </a>
+                        </span>
+                    </li>
+
+                    <li>
+                        
+                    </li>
+
+                    <li>
+                        
+                    </li>
+
+                    <li>
+                        
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     <section class="container-informations-movie">
+       
     
-    <? 
+    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song btn btn-default">AJOUTER</a>
+    </section>
+    
+</div>
+
+
+
+
+<? 
     $j = 0;
          foreach($credits->crew as $crew):
 
@@ -93,7 +139,3 @@ $credits = json_decode($credits);
     ?>
     <h4><?= $credits->crew[$j]->name ?></h4>
     <?}?>
-    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song btn btn-default">AJOUTER</a>
-    </section>
-    
-</div>

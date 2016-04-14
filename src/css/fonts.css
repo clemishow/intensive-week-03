@@ -39,5 +39,14 @@
   font-family: 'Agenda';
   src: url(../fonts/Agenda/Agenda-Light.TTF);
   font-weight: 300; }
+/*
+*** HELVETICA NUEW
+*/
+/* Regular normal */
+@font-face {
+  font-family: 'Helvetica';
+  src: url(../fonts/Helvetica/HelveticaNeueLTStd-Lt.otf);
+  font-weight: 400;
+  font-style: normal; }
 
 /*# sourceMappingURL=fonts.css.map */

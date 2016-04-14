@@ -1,22 +1,77 @@
 <?php
 
+/*
+*** PRECEDENT ID MOVIE
+**/
+
+$pre_id_movie_tab = [];
+$counter_pre_id = 0;
+
+function pre_id_movie($counter_pre_id, $pre_id_movie_tab){
+
+    if($counter_pre_id > 1){
+        $movie_id = $pre_id_movie_tab[$counter_pre_id - 2];
+        $counter_pre_id--;
+    }
+    
+    return $movie_id;
+
+}
+
+
 
 /*
 *** RANDOM ID MOVIE
 **/
 
-function random_id_movie($pdo) {
+function random_id_movie($pdo/*, $counter_pre_id, $pre_id_movie_tab*/) {
 
-    do{
-        
-        $movie_id   = mt_rand ( 0 , 1000 );
-        $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
-        $video      = $query->fetch();
-        
-    }while(empty($video->url));
-    
+    //if($counter_pre_id == 0){
+        do{
+
+            $movie_id   = mt_rand ( 0 , 1000 );
+            $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
+            $video      = $query->fetch();
+
+        }while(empty($video->url));
+
+    //}
+    //else{
+    //    do{
+//
+//            $movie_id   = mt_rand ( 0 , 1000 );
+//            $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
+//            $video      = $query->fetch();
+//
+//        }while(empty($video->url) && $movie_id != $pre_id_movie_tab[$counter_pre_id - 1]);
+//
+//    }
+//
+//    $pre_id_movie_tab[$counter_pre_id] = $movie_id;
+//    $counter_pre_id++;
+
     return $movie_id;
 }
+
+
+/*
+*** NEXT ID MOVIE
+**/
+
+function next_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab){
+    
+    if($counter_pre_id == count($pre_id_movie_tab)){
+        $movie_id = random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab);
+    }
+    
+    else{
+        $movie_id = $pre_id_movie_tab[$counter_pre_id];
+    }
+    
+    return $movie_id;
+
+}
+
 
 /*
 *** ADD A SONG

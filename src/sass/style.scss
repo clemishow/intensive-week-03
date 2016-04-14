@@ -52,6 +52,14 @@ ul {
   list-style: none;
 }
 
+.bg-danger {
+  background: #e74c3c;
+}
+
+.bg-success {
+  background: #27ae60;
+}
+
 /**
 *** HEADER
 */
@@ -68,6 +76,24 @@ header .icon-account {
   width: 24px;
   position: relative;
   top: 30px;
+}
+
+/**
+*** HEADER TITLE
+*/
+
+.header-title .container-title h2 {
+  text-transform: uppercase;
+  font-family: $font-proxima;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.header-title .divider {
+  width: 100%;
+  height: 3px;
+  background-color: $color-dominant;
+  margin-bottom: 30px;
 }
 
 /**
@@ -347,7 +373,6 @@ header .active-search a {
 /*
 *** LOG IN / SIGN IN
 **/
-
 .page-account input {
   background: transparent;
   border: none;
@@ -360,7 +385,6 @@ header .active-search a {
 .page-account input:focus,
 .page-account input:not(:focus) {
   outline: none;
-  outline: 10px auto transparent;
   outline-offset: none;
 }
 
@@ -371,6 +395,19 @@ header .active-search a {
 
 .page-account h4 {
   margin-bottom: 30px;
+  font-family: $font-proxima;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: 14px; 
+
+  &:before {
+    content: "";
+    background: $color-dominant;
+    width: 4px;
+    height: 21px;
+    position: absolute;
+    margin-left: -14px; 
+  }
 }
 
 /*

@@ -38,8 +38,8 @@
 								<a href="<?= URL ?>player?id=<?= $movie_id?>" onclick="next();">
 									<img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
 								</a>
-								<a href="javascript:void(0);">
-									<img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
+								<a href="<?= URL ?>movie?id=<?= $movie?>;">
+									<img class="icon-player" src="<? URL ?>src/images/icon-report.svg" alt="share">
 								</a>
 							</div>
 							<div class="container-duration-current-video">
@@ -52,9 +52,6 @@
 							<div class="progress-bar-video"></div>
 							<div class="cursor-bar-video"></div>
 						</div>
-					</div>
-					<div class="row">
-					    <a href="<?= URL ?>movie?id=<?= $movie?>">Je veux connaitre ce film</a>
 					</div>
 				</div>
 			</div>

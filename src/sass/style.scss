@@ -48,6 +48,10 @@ p, a {
   color: $color-light;
 }
 
+ul {
+  list-style: none;
+}
+
 /**
 *** HEADER
 */
@@ -60,7 +64,7 @@ header .logo-site {
   width: 140px;
 }
 
-header .logo-account {
+header .icon-account {
   width: 24px;
   position: relative;
   top: 30px;
@@ -102,6 +106,42 @@ footer .info-db {
 
 .hidden-footer {
   display: none;
+}
+
+/**
+*** NAV
+*/
+
+.container-account .container-nav {
+  background: $color-light;
+  width: 180px;
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 25px;
+}
+
+.container-account .container-nav ul {
+  margin-top: 10px;
+}
+
+.container-account .container-nav ul li {
+  margin-bottom: 4px;
+  position: relative;
+  right: 10px;
+}
+
+.container-account .container-nav a {
+  color: $color-dark;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.container-account .container-nav .icon {
+  position: relative;
+  bottom: 3px;
+  right: 10px;
 }
 
 /**
@@ -214,6 +254,10 @@ footer .info-db {
   font-weight: 600;
 }
 
+.player-controls .container-informations-music .artist {
+  text-transform: uppercase;
+}
+
 .player-controls .icon-player {
   width: 24px;
   position: relative;
@@ -248,9 +292,8 @@ header .hidden-search-bar {
   display: none;
 }
 
-header .glyphicon-search {
-  color: $color-light;
-  font-size: 25px;
+header .icon-search {
+  width: 24px;
   position: relative;
   top: 30px;
 }
@@ -289,10 +332,6 @@ header .active-search a {
     text-align: center;
 }
 
-.array {
-    text-align: left;
-}
-
 /* SEARCH RESULTS */
 
 .result-search .title-movie {
@@ -303,6 +342,35 @@ header .active-search a {
 
 .row-results {
   margin-bottom: 40px;
+}
+
+/*
+*** LOG IN / SIGN IN
+**/
+
+.page-account input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-size: 25px;
+  border-bottom: solid 2px $color-dominant;
+}
+
+.page-account input:focus,
+.page-account input:not(:focus) {
+  outline: none;
+  outline: 10px auto transparent;
+  outline-offset: none;
+}
+
+.page-account label {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.page-account h4 {
+  margin-bottom: 30px;
 }
 
 /*

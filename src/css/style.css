@@ -1,3 +1,4 @@
+@charset "UTF-8";
 iframe {
   display: none; }
 
@@ -30,6 +31,9 @@ a:hover {
 p, a {
   color: #fefefe; }
 
+ul {
+  list-style: none; }
+
 /**
 *** HEADER
 */
@@ -39,7 +43,7 @@ header {
 header .logo-site {
   width: 140px; }
 
-header .logo-account {
+header .icon-account {
   width: 24px;
   position: relative;
   top: 30px; }
@@ -75,6 +79,36 @@ footer .info-db {
 
 .hidden-footer {
   display: none; }
+
+/**
+*** NAV
+*/
+.container-account .container-nav {
+  background: #fefefe;
+  width: 180px;
+  z-index: 3;
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 25px; }
+
+.container-account .container-nav ul {
+  margin-top: 10px; }
+
+.container-account .container-nav ul li {
+  margin-bottom: 4px;
+  position: relative;
+  right: 10px; }
+
+.container-account .container-nav a {
+  color: #252525;
+  font-size: 18px;
+  font-weight: 300; }
+
+.container-account .container-nav .icon {
+  position: relative;
+  bottom: 3px;
+  right: 10px; }
 
 /**
 *** LANDING PAGE
@@ -169,6 +203,9 @@ footer .info-db {
 .player-controls .container-informations-music .song {
   font-weight: 600; }
 
+.player-controls .container-informations-music .artist {
+  text-transform: uppercase; }
+
 .player-controls .icon-player {
   width: 24px;
   position: relative;
@@ -194,9 +231,8 @@ footer .info-db {
 header .hidden-search-bar {
   display: none; }
 
-header .glyphicon-search {
-  color: #fefefe;
-  font-size: 25px;
+header .icon-search {
+  width: 24px;
   position: relative;
   top: 30px; }
 
@@ -229,9 +265,6 @@ header .active-search a {
   letter-spacing: 3px;
   text-align: center; }
 
-.array {
-  text-align: left; }
-
 /* SEARCH RESULTS */
 .result-search .title-movie {
   font-family: "Proxima Nova";
@@ -240,6 +273,30 @@ header .active-search a {
 
 .row-results {
   margin-bottom: 40px; }
+
+/*
+*** LOG IN / SIGN IN
+**/
+.page-account input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-size: 25px;
+  border-bottom: solid 2px #34b475; }
+
+.page-account input:focus,
+.page-account input:not(:focus) {
+  outline: none;
+  outline: 10px auto transparent;
+  outline-offset: none; }
+
+.page-account label {
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.page-account h4 {
+  margin-bottom: 30px; }
 
 /*
 ****

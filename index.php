@@ -20,6 +20,9 @@ else if ($q == 'movie')
 else if ($q == 'account') 
 	$page = 'account';
 
+else if ($q == 'logout') 
+	$page = 'logout';
+
 else 
 	$page = '404';
 
@@ -31,7 +34,7 @@ include 'views/pages/'.$page.'.php';
 include 'views/partials/footer.php';
 }
 
-else if ($q == '') {
+else if ($q == '' || $q == 'logout') {
     include 'views/pages/'.$page.'.php';
 }
 

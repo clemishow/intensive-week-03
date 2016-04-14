@@ -22,14 +22,30 @@
 				    		<div class="col-md-6">
 				    			<div class="container-icon-search">
 				    				<a href="<?= URL ?>search">
-				    					<span class="glyphicon glyphicon-search .active-search" aria-hidden="true"></span>
+				    					<img class="icon-search" src="<? URL ?>src/images/icon-search.svg" alt="logo search">
 				    				</a>
 				    			</div>
 				    		</div>
-				    		<div class="col-md-">
+				    		<div class="col-md-6">
 				    			<div class="container-account">
-				    				<a href="<?= URL ?>account">
-				    					<img class="logo-account" src="<? URL ?>src/images/icon-account.svg" alt="logo account">
+				    				<div class="container-nav">
+				    					<ul>
+				    						<li>
+				    							<span><img class="icon" src="<? URL ?>src/images/icon-account-black.svg" alt="logo account"></span>
+				    							<a href="<? URL ?>account">Mon compte</a>
+				    						</li>
+				    						<li>
+				    							<span><img class="icon" src="<? URL ?>src/images/icon-hearth.svg" alt="logo hearth"></span>
+				    							<a href="<? URL ?>logout">Wishlist</a>
+				    						</li>
+				    						<li>
+				    							<span><img class="icon" src="<? URL ?>src/images/icon-logout.svg" alt="logo logout"></span>
+				    							<a href="<? URL ?>logout">Déconnexion</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<a class="account-nav" href="#">
+				    					<img class="icon-account" src="<? URL ?>src/images/icon-account-white.svg" alt="logo account">
 				    				</a>
 				    			</div>
 				    		</div>

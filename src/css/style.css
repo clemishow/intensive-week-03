@@ -10,8 +10,9 @@ iframe {
 */
 body {
   background-image: url("../images/bg.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
+  background-repeat: repeat;
   color: #fefefe;
   font-family: "Proxima Nova";
   border-top: 6px solid #34b475;
@@ -343,6 +344,30 @@ header .active-search a {
 /*
 *** PAGE MOVIE
 */
+/* MODAL */
+.page-movie .cross {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 99;
+  cursor: pointer; }
+
+.page-movie .cross-line-1,
+.page-movie .cross-line-2 {
+  width: 25px;
+  height: 3px;
+  background: #fefefe; }
+
+.page-movie .cross-line-1 {
+  transform: rotate(45deg); }
+
+.page-movie .cross-line-2 {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -2px; }
+
 /* GENERAL */
 .page-movie header {
   display: none; }
@@ -459,7 +484,17 @@ header .active-search a {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  color: #252525; }
+  background: #34b475;
+  padding: 15px;
+  border-radius: 5px; }
+
+.hidden-movie-details {
+  display: none; }
+
+#movie-details {
+  background-color: white;
+  width: 100vw;
+  height: auto; }
 
 /*
 ****

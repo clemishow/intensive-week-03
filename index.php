@@ -29,15 +29,14 @@ else if ($q == 'add-song')
 else 
 	$page = '404';
 
-
-if($q == 'search' || $q == 'movie' || $q == 'player' || $q == 'account' || $q == 'add-song'){
+if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song'){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';
 include 'views/partials/footer.php';
 }
 
-else if ($q == '' || $q == 'logout') {
+else if ($q == '' || $q == 'logout' || $q == 'movie') {
     include 'views/pages/'.$page.'.php';
 }
 

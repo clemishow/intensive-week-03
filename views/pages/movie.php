@@ -43,10 +43,14 @@ $credits = json_decode($credits);
 
 ?>
 <div>
+    <div class="cross">
+        <div class="cross-line-1"></div>
+        <div class="cross-line-2"></div>
+    </div>
     <div class="row">
         <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>'); background-repeat: no-repeat; background-size: cover;">
             <div class="col-md-4 col-xs-2"></div>
-                <div class="col-md-6 col-xs-8 text-center-responsive">
+                <div class="col-md-3 col-xs-8 text-center-responsive">
                     <div class="container-informations">
                         <div class="container-date-movie">
                             <span>2014</span>
@@ -56,7 +60,6 @@ $credits = json_decode($credits);
                         </div>
                         <div class="container-genre-movie">
                             <span>
-
                                 <? 
                                 $j = 0;
                                      foreach($credits->crew as $crew):
@@ -166,16 +169,9 @@ $credits = json_decode($credits);
                             </div> 
                         </div>
                     </div>
-
-                    
                 </div>
             </div>
         </div>
     </div>
-    <section class="container-informations-movie">
-       
-    
     <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER</a>
-    </section>
-    
 </div>

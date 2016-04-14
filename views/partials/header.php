@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?= URL?>src/css/style.css">
 </head>
 <body class="page-<?= $class ?>">
+	<div id="movie-details" class="page-movie hidden-movie-details"></div>
 		<div class="site-wrapper">       
 	        <header>
 	            <div class="col-md-2">

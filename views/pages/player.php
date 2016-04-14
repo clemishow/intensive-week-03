@@ -1,17 +1,11 @@
 <?php
+
 $movie     = $_GET['id'];
 $query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video     = $query->fetch();
 
-//echo '<pre>';
-//print_r($song);
-//echo '</pre>';
-
 ?>
 <section>
-    <div class="row">
-        <div id="movie-details" style="background-color: white; margin: 0 auto; height: 600px; width: 75%;"></div>
-    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="player-controls">

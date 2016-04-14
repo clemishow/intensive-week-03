@@ -11,10 +11,20 @@
 		<div class="site-wrapper">       
 	        <header>
 	            <div class="col-md-2">
-	            <?$movie     = $_GET['id'];?>
-	            	<a href="<?= URL ?>player?id=<?= $movie?>">
-	            		<img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo">
-	            	</a>
+	            <? 
+                    if(!empty($_GET['id'])){
+                        $movie = $_GET['id'];
+                        ?>
+                        <a href="<?= URL ?>player?id=<?= $movie?>">
+                        <?
+                    } 
+                    else{
+                        ?>
+                        <a href="<?= URL ?>">
+                        <?
+                    }
+                ?>
+	            	<img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo"></a>
 	            </div>
 	            <div class="col-md-10">
 	            	<div class="col-md-10"></div>

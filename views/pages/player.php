@@ -10,6 +10,9 @@ $video     = $query->fetch();
 ?>
 <section>
     <div class="row">
+        <div id="movie-details" style="background-color: white; margin: 0 auto; height: 600px; width: 75%;"></div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <div class="player-controls">
                 <div class="row">

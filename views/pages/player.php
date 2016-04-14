@@ -1,7 +1,15 @@
 <?php
-	$movie = $_GET['id'];
-	$query = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
-	$video = $query->fetch();
+	$movie     = $_GET['id'];
+	$query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
+    $song      = $pdo->query("SELECT song FROM videos WHERE movie_id = '$movie'");
+    $artist    = $pdo->query("SELECT artist FROM videos WHERE movie_id = '$movie'");
+	$video     = $query->fetch();
+
+echo '<pre>';
+print_r($song);
+echo '</pre>';
+
+var_dump($song);
 ?>
 <section>
 	<div class="row">
@@ -11,8 +19,8 @@
 						<div class="col-md-3"></div>
 							<div class="col-md-6 text-center">
 								<div class="container-informations-music">
-									<h3 class="song">A Place Among the Stars</h3>
-									<h5 class="artist">Hanz Zamer</h5>
+									<h3 class="song"><?= $song?></h3>
+									<h5 class="artist"><?= $artist?></h5>
 								</div>
 							</div>
 						<div class="col-md-3"></div>

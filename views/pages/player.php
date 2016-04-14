@@ -35,7 +35,8 @@
 								<a href="javascript:void(0);" onclick="playPause();">
 									<img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
 								</a>
-								<a href="javascript:void(0);" onclick="next();">
+								<? $movie_id = random_id_movie(); ?>
+								<a href="<?= URL ?>player?id=<?= $movie_id?>" onclick="next();">
 									<img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
 								</a>
 							</div>
@@ -44,11 +45,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="ro">
+					<div class="row">
 						<div  class="seek-bar-video">
 							<div class="progress-bar-video"></div>
 							<div class="cursor-bar-video"></div>
 						</div>
+					</div>
+					<div class="row">
+					    <a href="<?= URL ?>movie?id=<?= $movie?>">Je veux connaitre ce film</a>
 					</div>
 				</div>
 			</div>

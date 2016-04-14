@@ -9,7 +9,7 @@ function random_id_movie($pdo) {
 
     do{
         
-        $movie_id   = mt_rand ( 0 , 16000 );
+        $movie_id   = mt_rand ( 0 , 1000 );
         $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
         $video      = $query->fetch();
         

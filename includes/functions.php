@@ -1,4 +1,9 @@
 <?php
+
+	/*
+	*** ADD A SONG
+	**/
+
 	$errors = [];
 	$success = [];
 	$url = '';
@@ -91,7 +96,8 @@ function get_youtube_id_from_url($url) {
 				if($user->password_signin == $password_signin) {
 				    $success[] = 'Connexion réussie, bienvenue '. $user->last . ' ' . $user->first;
 				    $_SESSION['state'] = true;
-				    setcookie('pseudo', $user->last, time() + 365*24*3600, null, null, false, true);
+				    setcookie('first-name', $user->first, time() + 365*24*3600, null, null, false, true);
+				    setcookie('last-name', $user->last, time() + 365*24*3600, null, null, false, true);
 				     $email = '';
 				    header('location:' . URL . 'account');
 				}
@@ -184,6 +190,7 @@ function get_youtube_id_from_url($url) {
 	else {
 		
 	}
+
 
 
 

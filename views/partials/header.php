@@ -28,23 +28,12 @@
 				    		</div>
 				    		<div class="col-md-6">
 				    			<div class="container-account">
-				    				<div class="container-nav">
-				    					<ul>
-				    						<li>
-				    							<span><img class="icon" src="<? URL ?>src/images/icon-account-black.svg" alt="logo account"></span>
-				    							<a href="<? URL ?>account">Mon compte</a>
-				    						</li>
-				    						<li>
-				    							<span><img class="icon" src="<? URL ?>src/images/icon-hearth.svg" alt="logo hearth"></span>
-				    							<a href="<? URL ?>logout">Wishlist</a>
-				    						</li>
-				    						<li>
-				    							<span><img class="icon" src="<? URL ?>src/images/icon-logout.svg" alt="logo logout"></span>
-				    							<a href="<? URL ?>logout">Déconnexion</a>
-				    						</li>
-				    					</ul>
-				    				</div>
-				    				<a class="account-nav" href="#">
+				    				<?php if(isset($_SESSION['state'])){ echo '<div class="container-nav"><ul>'; } ?>
+				    						<?php if(isset($_SESSION['state'])){ echo '<li><span><img class="icon" src="' . URL .'src/images/icon-account-black.svg" alt="logo account"></span><a href="' . URL .'account">Mon compte</a></li>';} ?>
+				    						<?php if(isset($_SESSION['state'])){ echo '<li><span><img class="icon" src="' . URL .'src/images/icon-hearth.svg" alt="logo hearth"></span><a href="' . URL .'wishlist">Wishlist</a></li>';} ?>
+				    						<?php if(isset($_SESSION['state'])){ echo '<li><span><img class="icon" src="' . URL .'src/images/icon-logout.svg" alt="logo logout"></span><a href="' . URL .'logout">Déconnexion</a></li>';} ?>
+				    				<?php if(isset($_SESSION['state'])){ echo '</div></ul>'; } ?>
+				    				<a class="account-nav" href="<?php if(!isset($_SESSION['state'])) { echo'account'; } else echo '#';?>">
 				    					<img class="icon-account" src="<? URL ?>src/images/icon-account-white.svg" alt="logo account">
 				    				</a>
 				    			</div>

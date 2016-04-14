@@ -329,6 +329,10 @@ header .active-search a {
     position: absolute;
     margin-left: -14px; }
 
+.page-account .btn-submit {
+  font-size: 20px;
+  font-weight: 300; }
+
 /*
 ****
 ***** MEDIAS QUERIES RESPONSIVE

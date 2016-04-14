@@ -40,7 +40,7 @@ function onPlayerReady(event) {
 	setInterval(function(){getCurrentTimeVideo();},100);
 	event.target.playVideo();
 	state_video = 1;
-	event.target.setVolume(0);
+	event.target.setVolume(100);
 	$('.loader').css('opacity', '0');
 	setInterval(function(){$('.loader').css('display', 'none');},300)
 }

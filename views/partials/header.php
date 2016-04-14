@@ -20,7 +20,7 @@
                         <?
     } 
             else{
-                $movie = random_id_movie($pdo);
+                $movie = random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab);
                         ?>
                         <a href="<?= URL ?>player?id=<?= $movie?>">
                             <?

@@ -5,15 +5,15 @@
 *** RANDOM ID MOVIE
 **/
 
-function random_id_movie() {
+function random_id_movie($pdo) {
 
     do{
         
-        $movie_id   = mt_rand ( 0 , 1000 );
-        //$query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
-        //$video      = $query->fetch();
+        $movie_id   = mt_rand ( 0 , 1000000 );
+        $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
+        $video      = $query->fetch();
         
-    }while(empty($movie_id));
+    }while(empty($video->url));
     
     return $movie_id;
 }

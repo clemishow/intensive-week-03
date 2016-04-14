@@ -19,14 +19,13 @@ function pre_id_movie($counter_pre_id, $pre_id_movie_tab){
 }
 
 
-
 /*
 *** RANDOM ID MOVIE
 **/
 
-function random_id_movie($pdo/*, $counter_pre_id, $pre_id_movie_tab*/) {
+function random_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab) {
 
-    //if($counter_pre_id == 0){
+    if($counter_pre_id == 0){
         do{
 
             $movie_id   = mt_rand ( 0 , 1000 );
@@ -35,20 +34,20 @@ function random_id_movie($pdo/*, $counter_pre_id, $pre_id_movie_tab*/) {
 
         }while(empty($video->url));
 
-    //}
-    //else{
-    //    do{
-//
-//            $movie_id   = mt_rand ( 0 , 1000 );
-//            $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
-//            $video      = $query->fetch();
-//
-//        }while(empty($video->url) && $movie_id != $pre_id_movie_tab[$counter_pre_id - 1]);
-//
-//    }
-//
-//    $pre_id_movie_tab[$counter_pre_id] = $movie_id;
-//    $counter_pre_id++;
+    }
+    else{
+        do{
+
+            $movie_id   = mt_rand ( 0 , 1000 );
+            $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
+            $video      = $query->fetch();
+
+        }while(empty($video->url) && $movie_id != $pre_id_movie_tab[$counter_pre_id - 1]);
+
+    }
+
+    $pre_id_movie_tab[$counter_pre_id] = $movie_id;
+    $counter_pre_id++;
 
     return $movie_id;
 }

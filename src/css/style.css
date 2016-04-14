@@ -416,7 +416,7 @@ header .active-search a {
   padding: 2% 5%; }
 
 .page-movie .container-description-movie {
-  margin-top: 30px; }
+  margin-top: 10px; }
 
 .page-movie .container-description-movie h4 {
   font-family: "Agenda";
@@ -429,6 +429,31 @@ header .active-search a {
 
 .page-movie .casting-informations ul li {
   margin-bottom: 30px; }
+
+/* PLAYER */
+.page-movie .playlist .container-icon-play {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border-radius: 50%;
+  border: 3px solid #252525; }
+
+.page-movie .playlist .container-icon-play:hover {
+  transition: 300ms all;
+  background: #34b475; }
+
+.page-movie .playlist .icon-play {
+  width: 10px;
+  position: relative;
+  top: 3px;
+  left: 9px; }
+
+.page-movie .playlist .container-informations-music {
+  float: left;
+  color: #252525; }
+
+.page-movie .playlist li {
+  margin-bottom: 60px; }
 
 /*
 ****

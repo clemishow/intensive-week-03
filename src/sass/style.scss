@@ -518,7 +518,7 @@ header .active-search a {
 }
 
 .page-movie .container-description-movie {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .page-movie .container-description-movie h4 {
@@ -536,6 +536,36 @@ header .active-search a {
   margin-bottom: 30px;
 }
 
+/* PLAYER */
+
+.page-movie .playlist .container-icon-play {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border-radius: 50%;
+  border: 3px solid $color-dark;
+}
+
+.page-movie .playlist .container-icon-play:hover {
+  transition: $transition-standard;
+  background: $color-dominant;
+}
+
+.page-movie .playlist .icon-play {
+  width: 10px;
+  position: relative;
+  top: 3px;
+  left: 9px;
+}
+
+.page-movie .playlist .container-informations-music {
+  float: left;
+  color: $color-dark;
+}
+
+.page-movie .playlist li {
+  margin-bottom: 60px;
+}
 
 
 

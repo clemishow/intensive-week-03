@@ -86,26 +86,68 @@ $credits = json_decode($credits);
             </div>
              <div class="row">
                 <h3>Bandes sons</h3>
-                <ul>
+                <ul class="playlist">
+                    <li>
+
+                        <div class="col-md-1">
+                            <a href="javascript:void(0);">
+                                <div class="container-icon-play">
+                                    <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
+                                </div>
+                            </a>
+                        </div>
+ 
+                        <div class="col-md-11 container-informations-music">
+                            <div class="title-song">
+                                Gone, Gone, Gone
+                            </div> 
+                            <div class="title-artist">
+                                HANS ZIMMER
+                            </div> 
+                        </div>
+                    </li>
+
                     <li>
                         <span>
                             <a href="javascript:void(0);">
-                                <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
+                                <div class="col-md-1">
+                                    <div class="container-icon-play">
+                                        <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
+                                    </div>
+                                </div>
                             </a>
                         </span>
+                        <div class="col-md-11 container-informations-music">
+                            <div class="title-song">
+                                Gone, Gone, Gone
+                            </div> 
+                            <div class="title-artist">
+                                HANS ZIMMER
+                            </div> 
+                        </div>
                     </li>
 
                     <li>
-                        
+                        <span>
+                            <a href="javascript:void(0);">
+                                <div class="col-md-1">
+                                    <div class="container-icon-play">
+                                        <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
+                                    </div>
+                                </div>
+                            </a>
+                        </span>
+                        <div class="col-md-11 container-informations-music">
+                            <div class="title-song">
+                                Gone, Gone, Gone
+                            </div> 
+                            <div class="title-artist">
+                                HANS ZIMMER
+                            </div> 
+                        </div>
                     </li>
 
-                    <li>
-                        
-                    </li>
-
-                    <li>
-                        
-                    </li>
+                    
                 </ul>
             </div>
         </div>

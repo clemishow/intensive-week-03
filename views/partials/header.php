@@ -19,8 +19,9 @@
                         <?
                     } 
                     else{
+                        $movie = random_id_movie($pdo);
                         ?>
-                        <a href="<?= URL ?>">
+                        <a href="<?= URL ?>player?id=<?= $movie?>">
                         <?
                     }
                 ?>

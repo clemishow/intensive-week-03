@@ -23,6 +23,9 @@ else if ($q == 'account')
 else if ($q == 'logout') 
 	$page = 'logout';
 
+else if ($q == 'add-song') 
+	$page = 'add-song';
+
 else 
 	$page = '404';
 

@@ -34,7 +34,7 @@
 								<a href="javascript:void(0);" onclick="playPause();">
 									<img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
 								</a>
-								<? $movie_id = random_id_movie($pdo); ?>
+								<? $movie_id = random_id_movie($pdo) ?>
 								<a href="<?= URL ?>player?id=<?= $movie_id?>" onclick="next();">
 									<img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
 								</a>
@@ -57,7 +57,7 @@
 				<div class="row text-center">
 					<div class="col-md-6">
 						<div class="button-player-left">
-							<button>VOIR</button>
+                            <a href="<?= URL ?>movie?id=<?= $movie?>"><button>VOIR</button></a>
 						</div>
 					</div>
 					<div class="col-md-6">

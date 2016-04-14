@@ -54,6 +54,18 @@
 						</div>
 					</div>
 				</div>
+				<div class="row text-center">
+					<div class="col-md-6">
+						<div class="button-player-left">
+							<button>VOIR</button>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="button-player-right">
+							<button>PARTAGER</button>
+						</div>
+					</div>
+				</div>
 			</div>
 			<?php require 'includes/player-frame.php'; ?>
 	</div>

@@ -18,9 +18,6 @@ function random_id_movie($pdo) {
     return $movie_id;
 }
 
-
-
-
 /*
 *** ADD A SONG
 **/

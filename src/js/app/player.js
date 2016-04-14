@@ -41,8 +41,6 @@ function onPlayerReady(event) {
 	event.target.playVideo();
 	state_video = 1;
 	event.target.setVolume(100);
-	$('.loader').css('opacity', '0');
-	setInterval(function(){$('.loader').css('display', 'none');},300)
 }
 
 function onPlayerPlaybackQualityChange(event) {

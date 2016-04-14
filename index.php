@@ -17,6 +17,9 @@ else if ($q == 'search')
 else if ($q == 'movie') 
 	$page = 'movie';
 
+else if ($q == 'movie-player') 
+	$page = 'movie-player';
+
 else if ($q == 'account') 
 	$page = 'account';
 
@@ -29,14 +32,14 @@ else if ($q == 'add-song')
 else 
 	$page = '404';
 
-if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song'){
+if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song' ){
 include 'controllers/'.$page.'.php';
 include 'views/partials/header.php';
 include 'views/pages/'.$page.'.php';
 include 'views/partials/footer.php';
 }
 
-else if ($q == '' || $q == 'logout' || $q == 'movie') {
+else if ($q == '' || $q == 'logout' || $q == 'movie' || $q == 'movie-player') {
     include 'views/pages/'.$page.'.php';
 }
 

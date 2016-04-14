@@ -41,7 +41,7 @@ $video     = $query->fetch();
                             <a href="<?= URL ?>player?id=<?= $movie//$next_movie_id?>" onclick="next();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
                             </a>
-                            <a href="<?= URL ?>movie?id=<?= $movie?>;">
+                            <a href="<?= URL ?>movie?id=<?= $movie?>">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-report.svg" alt="share">
                             </a>
                         </div>
@@ -60,7 +60,7 @@ $video     = $query->fetch();
             <div class="row text-center">
                 <div class="col-md-6">
                     <div class="button-player-left">
-                        <a href="<?= URL ?>movie?id=<?= $movie?>"><button>VOIR</button></a>
+                        <a href="<?= URL ?>movie-player?id=<?= $movie?>"><button>VOIR</button></a>
                     </div>
                 </div>
                 <div class="col-md-6">

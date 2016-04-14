@@ -37,6 +37,7 @@ if(!empty($_POST['submitUrl'])) {
     $url    = get_youtube_id_from_url($url);
     $song   = strip_tags(trim($_POST['song']));
     $artist = strip_tags(trim($_POST['artist']));
+    $id_movie = $_GET['id'];
 
     if(empty($url)) {
         $errors[] = 'Veuillez remplir une URL';
@@ -51,10 +52,11 @@ if(!empty($_POST['submitUrl'])) {
     }
 
     if(empty($errors)) {
-        $prepare = $pdo->prepare('INSERT INTO videos (url,song,artist) VALUES (:url,:song,:artist)');
+        $prepare = $pdo->prepare('INSERT INTO videos (url,song,artist,movie_id) VALUES (:url,:song,:artist,:movie_id)');
         $prepare->bindValue('url',$url);
         $prepare->bindValue('song',$song);
         $prepare->bindValue('artist',$artist);
+        $prepare->bindvalue('movie_id',$id_movie);
         $execute = $prepare->execute();
 
         if(!$execute) {

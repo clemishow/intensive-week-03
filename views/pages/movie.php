@@ -88,7 +88,7 @@ $credits = json_decode($credits);
                 <h3>Bandes sons</h3>
                 <ul class="playlist">
                     <li>
-
+                            
                         <div class="col-md-1">
                             <a href="javascript:void(0);">
                                 <div class="container-icon-play">

@@ -25,6 +25,9 @@
 					<div class="row">
 						<div class="text-center">
 							<div class="icons-container">
+								<a href="javascript:void(0);">
+									<img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
+								</a>
 								<a href="javascript:void(0);" onclick="previous();">
 									<img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
 								</a>
@@ -34,6 +37,9 @@
 								<? $movie_id = random_id_movie($pdo); ?>
 								<a href="<?= URL ?>player?id=<?= $movie_id?>" onclick="next();">
 									<img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
+								</a>
+								<a href="javascript:void(0);">
+									<img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
 								</a>
 							</div>
 							<div class="container-duration-current-video">

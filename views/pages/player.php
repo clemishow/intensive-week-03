@@ -1,11 +1,7 @@
 <?php
 	$movie     = $_GET['id'];
 	$query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
-    $song      = $pdo->query("SELECT song FROM videos WHERE movie_id = '$movie'");
-    $artist    = $pdo->query("SELECT artist FROM videos WHERE movie_id = '$movie'");
 	$video     = $query->fetch();
-	$song     = $song->fetch();
-	$artist     = $artist->fetch();
 
 //echo '<pre>';
 //print_r($song);
@@ -20,8 +16,8 @@
 						<div class="col-md-3"></div>
 							<div class="col-md-6 text-center">
 								<div class="container-informations-music">
-									<h3 class="song"><?= $song->song ?></h3>
-									<h5 class="artist"><?= $artist->artist ?></h5>
+									<h3 class="song"><?= $video->song ?></h3>
+									<h5 class="artist"><?= $video->artist ?></h5>
 								</div>
 							</div>
 						<div class="col-md-3"></div>

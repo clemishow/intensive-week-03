@@ -2,15 +2,16 @@
 
 
 /*
-	*** RANDOM ID MOVIE
-	**/
+*** RANDOM ID MOVIE
+**/
 
 function random_id_movie() {
 
     do{
         
-        $movie_id = mt_rand ( 0 , 1000000 );
-        //$query = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
+        $movie_id   = mt_rand ( 0 , 1000 );
+        //$query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
+        //$video      = $query->fetch();
         
     }while(empty($movie_id));
     
@@ -21,8 +22,8 @@ function random_id_movie() {
 
 
 /*
-	*** ADD A SONG
-	**/
+*** ADD A SONG
+**/
 
 $errors = [];
 $success = [];
@@ -78,8 +79,8 @@ function get_youtube_id_from_url($url) {
 }
 
 /* 
-	*** LOGIN SCRIPT 
-	**/
+*** LOGIN SCRIPT 
+**/
 
 $errors_login = array();
 $success_login = array();
@@ -133,8 +134,8 @@ else {
 }
 
 /*
-	*** SIGN IN 
-	**/
+*** SIGN IN 
+**/
 
 // CONFIGURATION
 

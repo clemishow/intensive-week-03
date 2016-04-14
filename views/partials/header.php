@@ -11,7 +11,8 @@
 		<div class="site-wrapper">       
 	        <header>
 	            <div class="col-md-2">
-	            	<a href="<?= URL ?>">
+	            <?$movie     = $_GET['id'];?>
+	            	<a href="<?= URL ?>player?id=<?= $movie?>">
 	            		<img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo">
 	            	</a>
 	            </div>

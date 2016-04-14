@@ -11,7 +11,7 @@
 		<div class="site-wrapper">       
 	        <header>
 	            <div class="col-md-2">
-	            	<a href="<?= URL ?>player">
+	            	<a href="<?= URL ?>">
 	            		<img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo">
 	            	</a>
 	            </div>

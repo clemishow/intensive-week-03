@@ -40,6 +40,7 @@ ul {
 .bg-success {
     background: #27ae60; }
 
+
 /**
 *** HEADER
 */
@@ -53,6 +54,7 @@ header .icon-account {
     width: 24px;
     position: relative;
     top: 30px; }
+
 
 /**
 *** HEADER TITLE
@@ -68,6 +70,7 @@ header .icon-account {
     height: 3px;
     background-color: #34b475;
     margin-bottom: 30px; }
+
 
 /**
 *** FOOTER
@@ -101,6 +104,7 @@ footer .info-db {
 .hidden-footer {
     display: none; }
 
+
 /**
 *** NAV
 */
@@ -130,6 +134,7 @@ footer .info-db {
     position: relative;
     bottom: 3px;
     right: 10px; }
+
 
 /**
 *** LANDING PAGE
@@ -161,11 +166,13 @@ footer .info-db {
     position: absolute;
     transition: 300ms all all; }
 
+
 /**
 *** PLAYER INDEX
 */
 .player-controls {
     margin-top: 35vh; }
+
 
 /* PROGRESS BAR */
 .player-controls .seek-bar-video {
@@ -241,6 +248,7 @@ footer .info-db {
     font-size: 18px;
     font-weight: 300; }
 
+
 /**
 *** PLAYER MOVIE
 */
@@ -295,6 +303,7 @@ header .active-search a {
 .row-results {
     margin-bottom: 40px; }
 
+
 /*
 *** LOG IN / SIGN IN
 **/
@@ -346,11 +355,10 @@ header .active-search a {
 /*# sourceMappingURL=style.css.map */
 
 
-/******************
 
-404
-
-******************/
+/**
+*** 404
+*/
 
 .page-404 {
     min-height: 100%;

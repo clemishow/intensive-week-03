@@ -19,9 +19,9 @@
 		<div class="col-md-2"></div>
 			<div class="text-center col-md-8">
 				<div class="container-strat-exp">
-					<a class="start-exp text-uppercase" href="<?= URL ?>player" title="start">Démarrer l'expérience</a>
+				<? $movie_id = random_id_movie(); ?>
+					<a class="start-exp text-uppercase" href="<?= URL ?>player?id=<?= $movie_id?>" title="start">Démarrer l'expérience</a>
 				</div>
 			</div>
 		<div class="col-md-2"></div>
 	</div>
-</section>

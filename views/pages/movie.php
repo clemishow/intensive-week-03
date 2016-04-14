@@ -43,6 +43,9 @@ $credits = json_decode($credits);
 
 ?>
 <div>
+    <div class="header-movie">
+        <img class="img-header" src="http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>" alt="poster-film">
+    </div>
     <img class="img-responsive" src="http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>" alt="poster-film">
     <h3><?= $response->title ?></h3>
     <p><?= $response->overview ?></p>

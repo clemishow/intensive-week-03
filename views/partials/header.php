@@ -6,7 +6,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= URL?>src/css/fonts.css">
 	<link rel="stylesheet" href="<?= URL?>src/css/style.css">
-	<meta property="og:title" content="Devdpazfczafza" />
 </head>
 <body class="page-<?= $class ?>">
 		<div class="site-wrapper">       

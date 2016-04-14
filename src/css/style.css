@@ -455,6 +455,11 @@ header .active-search a {
 .page-movie .playlist li {
   margin-bottom: 60px; }
 
+.page-movie .add-song {
+  position: fixed;
+  bottom: 50px;
+  right: 50px; }
+
 /*
 ****
 ***** MEDIAS QUERIES RESPONSIVE

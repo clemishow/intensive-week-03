@@ -55,7 +55,28 @@ $credits = json_decode($credits);
                             <h3><?= $response->title ?></h3>
                         </div>
                         <div class="container-genre-movie">
-                            <span>Drama - Horror</span>
+                            <span>
+
+                                <? 
+                                $j = 0;
+                                     foreach($credits->crew as $crew):
+
+                                     if($credits->crew[$j]->job == 'Director'){
+                                         $job = true;
+                                         break;
+                                     }
+                                     $j++;
+                                     endforeach;
+                                     if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
+                                         //echo true;
+                                         //echo '<pre>';
+                                         //print_r($credits->crew);
+                                         //echo '</pre>';
+                                ?>
+                                <span><?= $credits->crew[$j]->name ?></span>
+                                <?}?>
+
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -155,7 +176,7 @@ $credits = json_decode($credits);
     <section class="container-informations-movie">
        
     
-    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song btn btn-default">AJOUTER</a>
+    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER</a>
     </section>
     
 </div>
@@ -163,21 +184,3 @@ $credits = json_decode($credits);
 
 
 
-<? 
-    $j = 0;
-         foreach($credits->crew as $crew):
-
-         if($credits->crew[$j]->job == 'Director'){
-             $job = true;
-             break;
-         }
-         $j++;
-         endforeach;
-         if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
-             //echo true;
-             //echo '<pre>';
-             //print_r($credits->crew);
-             //echo '</pre>';
-    ?>
-    <h4><?= $credits->crew[$j]->name ?></h4>
-    <?}?>

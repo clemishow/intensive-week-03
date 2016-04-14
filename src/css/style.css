@@ -354,12 +354,7 @@ header .active-search a {
   overflow: hidden; }
 
 .page-movie .header-movie .img-header {
-  width: 100%;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px); }
+  width: 100%; }
 
 .page-movie .site-wrapper {
   padding: 0; }

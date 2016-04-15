@@ -1,5 +1,7 @@
 <?php
 
+echo isset($id_movie_tab);
+
 if(!isset($id_movie_tab) && !isset($counter_id)){
     $id_movie_tab = [];
     $counter_id = 0;
@@ -34,7 +36,6 @@ function pre_id_movie($counter_id, $id_movie_tab){
 
 function random_id_movie($pdo, $counter_id, $id_movie_tab) {
 
-    //echo $counter_pre_id;
 
     if($counter_id == 0){
 

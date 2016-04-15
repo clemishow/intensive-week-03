@@ -111,7 +111,7 @@ function random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/) {
 //}
 
 
-function random_id_video_movie($movie_id){
+function random_id_video_movie($pdo, $movie_id){
 
     $query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
     $video     = $query->fetchAll();

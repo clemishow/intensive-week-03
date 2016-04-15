@@ -9,7 +9,7 @@ else{
 $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video      = $query->fetchAll();
 
-$id_video = random_id_video_movie($movie);
+$id_video = random_id_video_movie($pdo, $movie);
 
 $pre_movie_id  = $movie;
 //$next_movie_id = 0;

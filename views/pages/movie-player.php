@@ -47,9 +47,9 @@ $movie     = $_GET['id'];
 $query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video     = $query->fetchAll();
 
-echo '<pre>';
-print_r($video);
-echo '</pre>';
+//echo '<pre>';
+//print_r($video);
+//echo '</pre>';
 
 ?>
 <div class="cross-container">
@@ -76,7 +76,7 @@ echo '</pre>';
             </div>
             <div class="row">
                 <div class="container-informations-music text-center">
-                    <span><h3 class="song"><?= $video[$id_video]->song ?> –<?= $video[$id_video]->artist ?></h3></span>
+                    <!--<span><h3 class="song"><?//= $video[$id_video]->song ?> –<?//= $video[$id_video]->artist ?></h3></span>-->
                 </div>
             </div>
         </div>

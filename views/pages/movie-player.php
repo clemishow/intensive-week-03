@@ -108,7 +108,7 @@ $video     = $query->fetch();
                     <h3><?= $response->title ?></h3>
                 </div>
                 <div class="container-date-movie">
-                    <span>2014</span>
+                    <span><?= $response->release_date ?></span>
                 </div>
                 <div class="container-genre-movie">
                     <span>

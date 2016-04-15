@@ -109,7 +109,6 @@ footer .info-db {
 .container-account .container-nav {
   background: #fefefe;
   width: 180px;
-  z-index: 3;
   display: none;
   position: absolute;
   top: 80px;
@@ -166,11 +165,16 @@ footer .info-db {
 /*
 *** ANIMATION BETWEEN PAGES
 **/
+.global-player {
+  position: relative;
+  bottom: 70px; }
+
 .container-animation {
   width: 200px;
   height: 100px;
-  padding-top: 100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative;
+  top: 45px; }
 
 .container-animation .ball {
   width: 10px;
@@ -273,10 +277,6 @@ footer .info-db {
 /**
 *** PLAYER INDEX
 **/
-/*.global-player {
-  position: relative;
-    bottom: 70px;
-}*/
 .player-controls {
   margin-top: 35vh; }
 

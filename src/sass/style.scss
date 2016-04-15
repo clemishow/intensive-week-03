@@ -144,11 +144,11 @@ footer .info-db {
 .container-account .container-nav {
   background: $color-light;
   width: 180px;
-  z-index: 3;
   display: none;
   position: absolute;
   top: 80px;
   right: 25px;
+
 }
 
 .container-account .container-nav ul {
@@ -214,11 +214,17 @@ footer .info-db {
 *** ANIMATION BETWEEN PAGES
 **/
 
+.global-player {
+  position: relative;
+  bottom: 70px;
+}
+
 .container-animation {
   width: 200px;
   height: 100px;
-  padding-top: 100px;
   margin: 0 auto;
+  position: relative;
+  top: 45px;
 }
 
 .container-animation .ball {
@@ -326,11 +332,6 @@ footer .info-db {
 /**
 *** PLAYER INDEX
 **/
-
-/*.global-player {
-  position: relative;
-    bottom: 70px;
-}*/
 
 .player-controls {
   margin-top: 35vh;

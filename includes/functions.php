@@ -139,9 +139,10 @@ if(!empty($_POST['submitUrl'])) {
     $song   = strip_tags(trim($_POST['song']));
     $artist = strip_tags(trim($_POST['artist']));
     $id_movie = $_GET['id'];
-
-    if(empty($url)) {
-        $errors[] = 'Veuillez remplir une URL';
+    $yt = "youtube";
+    
+    if($yt.indexof($url)) {
+        $errors[] = 'Veuillez remplir une URL YouTube';
     }
 
     if(empty($song)) {

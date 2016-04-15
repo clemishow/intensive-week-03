@@ -39,7 +39,10 @@ curl_close($ch);
 
 // Json decode
 $credits = json_decode($credits);
-//var_dump($credits);
+
+$movie     = $_GET['id'];
+$query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
+$video     = $query->fetchAll();
 
 ?>
 <div>
@@ -107,65 +110,32 @@ $credits = json_decode($credits);
              <div class="row">
                 <h3>Bandes sons</h3>
                 <div class="playlist">
-                    <div class="row">
-                        <div class="col-md-1">
-                            <a href="javascript:void(0);">
-                                <div class="container-icon-play">
-                                    <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
-                                </div>
-                            </a>
-                        </div>
- 
-                        <div class="col-md-11 container-informations-music">
-                            <div class="title-song">
-                                Gone, Gone, Gone
-                            </div> 
-                            <div class="title-artist">
-                                HANS ZIMMER
-                            </div> 
-                        </div>
+                <?
+                    for($p = 0; $p < count($video); $p++){
+                ?>
+                <div class="row">
+                    <div class="col-md-1">
+                        <a href="javascript:void(0);">
+                            <div class="container-icon-play">
+                                <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="row">
-                        <span>
-                            <a href="javascript:void(0);">
-                                <div class="col-md-1">
-                                    <div class="container-icon-play">
-                                        <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
-                                    </div>
-                                </div>
-                            </a>
-                        </span>
-                        <div class="col-md-11 container-informations-music">
-                            <div class="title-song">
-                                Gone, Gone, Gone
-                            </div> 
-                            <div class="title-artist">
-                                HANS ZIMMER
-                            </div> 
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <span>
-                            <a href="javascript:void(0);">
-                                <div class="col-md-1">
-                                    <div class="container-icon-play">
-                                        <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
-                                    </div>
-                                </div>
-                            </a>
-                        </span>
-                        <div class="col-md-11 container-informations-music">
-                            <div class="title-song">
-                                Gone, Gone, Gone
-                            </div> 
-                            <div class="title-artist">
-                                HANS ZIMMER
-                            </div> 
-                        </div>
+                    <div class="col-md-11 container-informations-music">
+                        <div class="title-song">
+                            <?= $video[$p]->song ?>
+                        </div> 
+                        <div class="title-artist">
+                            <?= $video[$p]->artist ?>
+                        </div> 
                     </div>
                 </div>
+
+                <?
+                    } 
+                ?>
+            </div>
             </div>
         </div>
     </div>

@@ -429,7 +429,8 @@ footer .info-db {
 
 .player-bottom .icons-container {
   position: relative;
-  left: -44px; }
+  left: -44px;
+  top: 11px; }
 
 .player-bottom .icons-container {
   margin-left: 50px; }

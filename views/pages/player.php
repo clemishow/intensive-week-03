@@ -16,8 +16,17 @@ $movie_id = random_id_movie($pdo);
 ?>
 
 <section>
-    <div class="row">
+    <div class="row global-player">
         <div class="col-md-12">
+            <div class="container-animation">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+            </div>
             <div class="player-controls">
                 <div class="row">
                     <div class="col-md-3"></div>

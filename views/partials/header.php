@@ -11,7 +11,6 @@
 //print_r($_COOKIE);
 //echo '</pre>';
 
-
 ?>
 
 
@@ -25,15 +24,6 @@
         <link rel="stylesheet" href="<?= URL?>src/css/style.css">
     </head>
     <body class="page-<?= $class ?>">
-        <div class="container-animation">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-        </div>
         <div id="movie-details" class="page-movie hidden-movie-details"></div>
         <div class="site-wrapper">       
             <header>

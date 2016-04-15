@@ -219,7 +219,6 @@ footer .info-db {
   height: 100px;
   padding-top: 100px;
   margin: 0 auto;
-  display: none;
 }
 
 .container-animation .ball {
@@ -233,7 +232,8 @@ footer .info-db {
   background: $color-light;
   -webkit-animation: right 1s infinite ease-in-out;
   -moz-animation: right 1s infinite ease-in-out;
-  animation: right 1s infinite ease-in-out;   
+  animation: right 1s infinite ease-in-out;
+  animation-play-state: played;   
 }
 
 .container-animation .ball:nth-child(2) {
@@ -241,6 +241,7 @@ footer .info-db {
   -webkit-animation: left 1.1s infinite ease-in-out;
   -moz-animation: left 1.1s infinite ease-in-out;
   animation: left 1.1s infinite ease-in-out;
+  animation-play-state: played;
 }
 
 
@@ -249,6 +250,7 @@ footer .info-db {
   -webkit-animation: right 1.05s infinite ease-in-out;
   -moz-animation: right 1.05s infinite ease-in-out;
   animation: right 1.05s infinite ease-in-out;
+  animation-play-state: played;
 }
 
 .container-animation .ball:nth-child(4) {
@@ -256,6 +258,7 @@ footer .info-db {
   -webkit-animation: left 1.15s infinite ease-in-out;
   -moz-animation: left 1.15s infinite ease-in-out;
   animation: left 1.15s infinite ease-in-out;
+  animation-play-state: played;
  }
 
 .container-animation .ball:nth-child(5) {
@@ -263,6 +266,7 @@ footer .info-db {
   -webkit-animation: right 1.1s infinite ease-in-out;
   -moz-animation: right 1.1s infinite ease-in-out;
   animation: right 1.1s infinite ease-in-out;
+  animation-play-state: played;
 }
 
 .container-animation .ball:nth-child(6) {
@@ -270,6 +274,7 @@ footer .info-db {
   -webkit-animation: left 1.05s infinite ease-in-out;
   -moz-animation: left 1.05s infinite ease-in-out;
   animation: left 1.05s infinite ease-in-out;
+  animation-play-state: played;
  }
 
 .container-animation .ball:nth-child(7) {
@@ -277,6 +282,7 @@ footer .info-db {
   -webkit-animation: right 1s infinite ease-in-out;
   -moz-animation: right 1s infinite ease-in-out;
   animation: right 1s infinite ease-in-out;
+  animation-play-state: played;
 }
 
 
@@ -319,6 +325,11 @@ footer .info-db {
 /**
 *** PLAYER INDEX
 **/
+
+.global-player {
+  position: relative;
+    bottom: 70px;
+}
 
 .player-controls {
   margin-top: 35vh;

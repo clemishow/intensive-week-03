@@ -327,10 +327,10 @@ footer .info-db {
 *** PLAYER INDEX
 **/
 
-.global-player {
+/*.global-player {
   position: relative;
     bottom: 70px;
-}
+}*/
 
 .player-controls {
   margin-top: 35vh;
@@ -669,6 +669,8 @@ header .hidden-search-bar {
 .page-movie .cross-container {
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  background: $color-dominant;
   position: absolute;
   top: 50px;
   right: 50px;
@@ -685,12 +687,17 @@ header .hidden-search-bar {
 
 .page-movie .cross-line-1 {
   transform: rotate(45deg);
+  position: relative;
+  top: 23px;
+  left: 12px;
 }
 
 .page-movie .cross-line-2 {
   transform: rotate(-45deg);
   position: relative;
-  top: -2px;
+  position: relative;
+  top: 20px;
+  left: 12px;
 }
 
 /* GENERAL */

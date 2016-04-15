@@ -1,18 +1,18 @@
 <?php
 
-if(isset($_COOKIE['counter_id']) && isset($_COOKIE['id_movie_tab'])){
-    //$counter_id = $_COOKIE['counter_id'];
-    //$lenght_id_tab = $_COOKIE['lenght_id_tab'];
-    //$id_movie_tab = $_COOKIE['id_movie_tab'+$lenght_id_tab];
-}
-elseif(!isset($id_movie_tab) && !isset($counter_id)){
-    $id_movie_tab = $_GET['id'];
-    $counter_id = 0;
-    $lenght_id_tab = 0;
-    setcookie('id_movie_tab'+$counter_id, $id_movie_tab, time() + 24 * 3600, '/');
-    setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
-    setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
-}
+//if(isset($_COOKIE['counter_id']) && isset($_COOKIE['id_movie_tab'])){
+//    $counter_id = $_COOKIE['counter_id'];
+//    $lenght_id_tab = $_COOKIE['lenght_id_tab'];
+//    $id_movie_tab = $_COOKIE['id_movie_tab'+$lenght_id_tab];
+//}
+//elseif(!isset($id_movie_tab) && !isset($counter_id)){
+//    $id_movie_tab = $_GET['id'];
+//    $counter_id = 0;
+//    $lenght_id_tab = 0;
+//    setcookie('id_movie_tab'+$counter_id, $id_movie_tab, time() + 24 * 3600, '/');
+//    setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
+//    setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
+//}
 
 
 /*
@@ -20,31 +20,31 @@ elseif(!isset($id_movie_tab) && !isset($counter_id)){
 **/
 
 
-function pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab){
-
-
-    if($counter_id > 1){
-        $movie_id = $_COOKIE['id_movie_tab' + $counter_id - 2];
-        $counter_id--;
-
-        return $movie_id;
-    }
-    else{
-        $movie_id = $_GET['id'];
-        return $movie_id;
-    }
-
-}
+//function pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab){
+//
+//
+//    if($counter_id > 1){
+//        $movie_id = $_COOKIE['id_movie_tab' + $counter_id - 2];
+//        $counter_id--;
+//
+//        return $movie_id;
+//    }
+//    else{
+//        $movie_id = $_GET['id'];
+//        return $movie_id;
+//    }
+//
+//}
 
 
 /*
 *** RANDOM ID MOVIE
 **/
 
-function random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab) {
+function random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/) {
 
 
-    if($counter_id == 0){
+    if(empty($_GET['id'])){
 
         do{
 
@@ -62,13 +62,13 @@ function random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab) {
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
-        }while(empty($video->url) && $movie_id != $_COOKIE['id_movie_tab' + $counter_id - 1]);
+        }while(empty($video->url) && $movie_id != $_GET['id']);
 
     }
 
-    $id_movie_tab = $movie_id;
-    $lenght_id_tab++;
-    $counter_id++;
+//    $id_movie_tab = $movie_id;
+//    $lenght_id_tab++;
+//    $counter_id++;
 
 
     return $movie_id;
@@ -79,21 +79,21 @@ function random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab) {
 *** NEXT ID MOVIE
 **/
 
-function next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab){
-
-
-    if($counter_id == $lenght_id_tab){
-        $movie_id = random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab);
-    }
-
-    else{
-        $movie_id = $_COOKIE['id_movie_tab' + $counter_id];
-        $counter_id++;
-    }
-
-    return $movie_id;
-
-}
+//function next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab){
+//
+//
+//    if($counter_id == $lenght_id_tab){
+//        $movie_id = random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab);
+//    }
+//
+//    else{
+//        $movie_id = $_COOKIE['id_movie_tab' + $counter_id];
+//        $counter_id++;
+//    }
+//
+//    return $movie_id;
+//
+//}
 
 
 /*

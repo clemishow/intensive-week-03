@@ -165,10 +165,10 @@ $reason = '';
 
 if(!empty($_POST['submitReport'])) {
 
-    $id_movie = $_GET['id'];
-    $reason   = strip_tags(trim($_POST['reason']));
-    $user     = $_SESSION['email'];
-    $state    = 'NULL';
+    $id_movie         = $_GET['id'];
+    $reason           = strip_tags(trim($_POST['reason']));
+    $user             = $_SESSION['email'];
+    $state            = 'NULL';
     
 
     if(empty($reason)) {
@@ -189,9 +189,7 @@ if(!empty($_POST['submitReport'])) {
 
         else {
             $success_report[] = 'Votre demande a bien été enregistrée';
-            $url   = '';
-            $song   = '';
-            $artist = '';
+            $reason = '';
         }
     }
 
@@ -236,7 +234,7 @@ if(!empty($_POST['submitlogin'])) {
         if($user->password_signin == $password_signin) {
             $success[] = 'Connexion réussie, bienvenue '. $user->last . ' ' . $user->first;
             $_SESSION['state'] = true;
-            $_SESSION['email'] = $user->email;
+            $_SESSION['email'] = $email_signin;
             setcookie('first-name', $user->first, time() + 365*24*3600, null, null, false, true);
             setcookie('last-name', $user->last, time() + 365*24*3600, null, null, false, true);
             $email = '';

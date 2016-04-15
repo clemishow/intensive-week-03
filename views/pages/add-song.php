@@ -31,18 +31,30 @@
 			<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<form action="" method="post">
-						<div class="form-group">
-							<label for="url">YouTube URL :</label>
-							<input id="url" type="text" name="url" class="form-control" value="<?= $url ?>">
+						<div class="row">
+							<div class="group">      
+						      <input type="url" name="url" value="<?= $url ?>" required>
+							      <span class="highlight"></span>
+							      <span class="bar"></span>
+						      <label>YouTube URL</label>
+						    </div>
 						</div>
-						<div class="form-group">
-							<label for="song">Titre du son :</label>
-							<input id="song" type="text" name="song" class="form-control" value="<?= $song ?>">
-						</div>
-						<div class="form-group">
-							<label for="artist">Artiste :</label>
-							<input id="artist" type="text" name="artist" class="form-control" value="<?= $artist ?>">
-						</div>
+					    <div class="row">
+							<div class="group">      
+								<input type="text" name="song" value="<?= $song ?>" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+								<label>Titre de la musique</label>
+							</div>
+					    </div>
+					     <div class="row">
+							<div class="group">      
+								<input type="text" name="artist" value="<?= $artist ?>" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+								<label>Artiste</label>
+							</div>
+					    </div>
 						<input class="btn btn-default" name="submitUrl" type="submit" value="envoyer">
 					</form>
 				</div>

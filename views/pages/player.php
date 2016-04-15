@@ -7,7 +7,7 @@ else{
     $movie = random_id_movie($pdo/*, $counter_id, $id_movie_tab*/);
 }
 $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
-$video      = $query->fetch();
+$video      = $query->fetchAll();
 $pre_movie_id  = $movie;
 //$next_movie_id = 0;
 
@@ -23,8 +23,8 @@ $movie_id = random_id_movie($pdo);
                     <div class="col-md-3"></div>
                     <div class="col-md-6 text-center">
                         <div class="container-informations-music">
-                            <h3 class="song"><?= $video->song ?></h3>
-                            <h5 class="artist"><?= $video->artist ?></h5>
+                            <h3 class="song"><?= $video[0]->song ?></h3>
+                            <h5 class="artist"><?= $video[0]->artist ?></h5>
                         </div>
                     </div>
                     <div class="col-md-3"></div>
@@ -88,7 +88,7 @@ $movie_id = random_id_movie($pdo);
         <?php require 'includes/player-frame.php'; ?>
     </div>
     <div>
-        <!-- <h3><span class="info-song"><?= $video->song ?></span> – <span class="info-song"><?= $video->artist ?></span></h3> -->
+        <!-- <h3><span class="info-song"><?= $video[0]->song ?></span> – <span class="info-song"><?= $video[0]->artist ?></span></h3> -->
     </div>
 </section>
 <script src="src/js/app/player.js"></script>

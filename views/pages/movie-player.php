@@ -6,13 +6,6 @@ if(isset($_GET['id'])){
     $index_movie = $_GET['id'];
 }
 
-$query      = $pdo->query("SELECT song, artist FROM videos WHERE movie_id = '$index_movie'");
-$video      = $query->fetch();
-
-echo '<pre>';
-print_r($video->song);
-echo '</pre>'; 
-
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, "http://api.themoviedb.org/3/movie/$index_movie?api_key=$api_key&language=fr");
@@ -52,7 +45,11 @@ $credits = json_decode($credits);
 
 $movie     = $_GET['id'];
 $query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
-$video     = $query->fetch();
+$video     = $query->fetchAll();
+
+echo '<pre>';
+print_r($video);
+echo '</pre>';
 
 ?>
 <div class="cross-container">
@@ -79,7 +76,7 @@ $video     = $query->fetch();
             </div>
             <div class="row">
                 <div class="container-informations-music text-center">
-                    <span><h3 class="song"><?= $video->song ?> –<?= $video->artist ?></h3></span>
+                    <span><h3 class="song"><?= $video[0]->song ?> –<?= $video[0]->artist ?></h3></span>
                 </div>
             </div>
         </div>
@@ -151,8 +148,7 @@ $video     = $query->fetch();
             <h3>Bandes sons</h3>
             <div class="playlist">
                 <?
-                    for($p = 0; $p < 5; $p++){
-                        if($p < count($video->song)){
+                    for($p = 0; $p < count($video); $p++){
                 ?>
                 <div class="row">
                     <div class="col-md-1">
@@ -165,16 +161,15 @@ $video     = $query->fetch();
 
                     <div class="col-md-11 container-informations-music">
                         <div class="title-song">
-                            <?= $video->song ?>
+                            <?= $video[$p]->song ?>
                         </div> 
                         <div class="title-artist">
-                            <?= $video->artist ?>
+                            <?= $video[$p]->artist ?>
                         </div> 
                     </div>
                 </div>
 
                 <?
-                        }
                     } 
                 ?>
 

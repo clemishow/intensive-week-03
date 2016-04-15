@@ -442,25 +442,25 @@ header .hidden-search-bar {
   left: -10%;
   top: -5%; }
 
-.page-movie .header-movie .container-informations {
-  margin-top: 160px; }
+.page-movie .container-title-movie h3 {
+  font-size: 42px; }
 
-.page-movie .header-movie .container-title-movie h3 {
-  color: #fefefe;
-  z-index: 3;
-  position: absolute; }
-
-.page-movie .header-movie .container-date-movie span {
-  color: #fefefe;
+.page-movie .container-date-movie span {
+  color: #252525;
   font-family: "Agenda";
   font-weight: 300;
   font-size: 18px; }
 
-.page-movie .header-movie .container-genre-movie {
-  color: #fefefe;
+.page-movie .container-genre-movie {
+  color: #252525;
   font-family: "Agenda";
   font-weight: 300;
   font-size: 14px; }
+
+.page-movie .container-date-movie,
+.page-movie .container-genre-movie {
+  position: relative;
+  bottom: 14px; }
 
 /* POSTER */
 .page-movie .container-poster {
@@ -478,13 +478,13 @@ header .hidden-search-bar {
 .page-movie .container-informations-movie {
   padding: 2% 5%; }
 
-.page-movie .container-description-movie {
-  margin-top: 10px; }
-
 .page-movie .container-description-movie h4 {
   font-family: "Agenda";
   font-weight: 600;
   font-size: 26px; }
+
+.page-movie .informations-movies-global {
+  padding: 0% 5%; }
 
 .page-movie .casting-informations {
   position: relative;

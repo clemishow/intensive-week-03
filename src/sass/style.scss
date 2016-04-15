@@ -548,28 +548,28 @@ header .hidden-search-bar {
   top: -5%;
 }
 
-.page-movie .header-movie .container-informations {
-      margin-top: 160px;
+.page-movie  .container-title-movie h3 {
+  font-size: 42px;
 }
 
-.page-movie .header-movie .container-title-movie h3 {
-  color: $color-light;
-  z-index: 3;
-  position: absolute;
-}
-
-.page-movie .header-movie .container-date-movie span {
-  color: $color-light;
+.page-movie .container-date-movie span {
+  color: $color-dark;
   font-family: $font-agenda;
   font-weight: 300;
   font-size: 18px;
 }
 
-.page-movie .header-movie .container-genre-movie {
-  color: $color-light;
+.page-movie .container-genre-movie {
+  color: $color-dark;
   font-family: $font-agenda;
   font-weight: 300;
   font-size: 14px;
+}
+
+.page-movie .container-date-movie,
+.page-movie .container-genre-movie {
+  position: relative;
+  bottom: 14px;
 }
 
 /* POSTER */
@@ -594,14 +594,14 @@ header .hidden-search-bar {
   padding: 2% 5%;
 }
 
-.page-movie .container-description-movie {
-  margin-top: 10px;
-}
-
 .page-movie .container-description-movie h4 {
  font-family: $font-agenda;
  font-weight: 600;
  font-size: 26px;
+}
+
+.page-movie .informations-movies-global {
+  padding: 0% 5%;
 }
 
 .page-movie .casting-informations {

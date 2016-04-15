@@ -45,41 +45,6 @@ $credits = json_decode($credits);
 <div>
     <div class="row">
         <div class="header-movie" style="background:url('http://image.tmdb.org/t/p/w500<?= $response->poster_path ?>'); background-repeat: no-repeat; background-size: cover;">
-            <div class="col-md-4 col-xs-2"></div>
-                <div class="col-md-3 col-xs-8 text-center-responsive">
-                    <div class="container-informations">
-                        <div class="container-date-movie">
-                            <span>2014</span>
-                        </div>
-                        <div class="container-title-movie">
-                            <h3><?= $response->title ?></h3>
-                        </div>
-                        <div class="container-genre-movie">
-                            <span>
-                                <? 
-                                $j = 0;
-                                     foreach($credits->crew as $crew):
-
-                                     if($credits->crew[$j]->job == 'Director'){
-                                         $job = true;
-                                         break;
-                                     }
-                                     $j++;
-                                     endforeach;
-                                     if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
-                                         //echo true;
-                                         //echo '<pre>';
-                                         //print_r($credits->crew);
-                                         //echo '</pre>';
-                                ?>
-                                <span><?= $credits->crew[$j]->name ?></span>
-                                <?}?>
-
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            <div class="col-md-2 col-xs-2"></div>
         </div>
     </div>
     <div class="row">
@@ -100,6 +65,39 @@ $credits = json_decode($credits);
                 </div>
             </div>
         <div class="col-md-8 col-xs-12">
+            <div class="row">
+                <div class="container-informations">
+                    <div class="container-title-movie">
+                        <h3><?= $response->title ?></h3>
+                    </div>
+                    <div class="container-date-movie">
+                        <span>2014</span>
+                    </div>
+                    <div class="container-genre-movie">
+                        <span>
+                            <? 
+                            $j = 0;
+                                 foreach($credits->crew as $crew):
+
+                                 if($credits->crew[$j]->job == 'Director'){
+                                     $job = true;
+                                     break;
+                                 }
+                                 $j++;
+                                 endforeach;
+                                 if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
+                                     //echo true;
+                                     //echo '<pre>';
+                                     //print_r($credits->crew);
+                                     //echo '</pre>';
+                            ?>
+                            <span><?= $credits->crew[$j]->name ?></span>
+                            <?}?>
+
+                        </span>
+                    </div>
+                </div>
+            </div>
             <div class="row container-description-movie">
                 <h3>Synopsis</h3>
                 <p><?= $response->overview ?></p>
@@ -169,5 +167,5 @@ $credits = json_decode($credits);
             </div>
         </div>
     </div>
-    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER</a>
+    <a href="<?= URL ?>add-song?id=<?= $index_movie?>" class="add-song">AJOUTER UNE MUSIQUE</a>
 </div>

@@ -1,7 +1,7 @@
 	</div>
 	<footer class="hidden-footer">
 		<div class="col-md-2 text-center">
-			<a class="legal" href="#">Mentions légales</a>
+			<a class="legal" href="<? URL ?>legals">Mentions légales</a>
 		</div>
 			<div class="col-md-2"></div>
 		<div class="col-md-8">

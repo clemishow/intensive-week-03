@@ -567,14 +567,13 @@ header .hidden-search-bar {
   display: none; }
 
 /*
-****
-***** MEDIAS QUERIES RESPONSIVE
-****
+*** LEGALS
 **/
-@media screen and (max-width: 768px) {
-  /* PAGE MOVIE */
-  .page-movie .header-movie .text-center-responsive {
-    text-align: center; } }
+.page-legals {
+  color: #fefefe;
+  font-family: "Agenda";
+  font-size: 16px; }
+
 /* INPUTS */
 .group {
   position: relative;

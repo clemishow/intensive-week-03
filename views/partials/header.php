@@ -22,18 +22,18 @@
             <header>
                 <div class="col-md-2">
                     <? 
-    if(!empty($_GET['id'])){
-        $movie = $_GET['id'];
+    //if(!empty($_GET['id'])){
+       // $movie = $_GET['id'];
                     ?>
-                    <a href="<?= URL ?>player?id=<?= $movie?>">
+                    <!-- <a href="<?= URL ?>player?id=<?= $movie?>"> -->
                         <?
-    } 
-            else{
-                $movie = random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab);
+    //} 
+           // else{
+               // $movie = random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab);
                         ?>
-                        <a href="<?= URL ?>player?id=<?= $movie?>">
+                       <!--  <a href="<?= URL ?>player?id=<?= $movie?>"> -->
                             <?
-            }
+            //}
                             ?>
                             <img class="logo-site" src="<? URL ?>src/images/logo-mooving-white.svg" alt="logo"></a>
                         </div>

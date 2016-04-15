@@ -702,17 +702,13 @@ header .hidden-search-bar {
 }
 
 /*
-****
-***** MEDIAS QUERIES RESPONSIVE
-****
+*** LEGALS
 **/
 
-@media screen and (max-width: 768px) {
-  /* PAGE MOVIE */
-  .page-movie .header-movie .text-center-responsive {
-    text-align: center;
-  }
-    
+.page-legals {
+  color: $color-light;
+  font-family: $font-agenda;
+  font-size: 16px;
 }
 
 /* INPUTS */

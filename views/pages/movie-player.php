@@ -76,7 +76,7 @@ echo '</pre>';
             </div>
             <div class="row">
                 <div class="container-informations-music text-center">
-                    <span><h3 class="song"><?= $video[0]->song ?> –<?= $video[0]->artist ?></h3></span>
+                    <span><h3 class="song"><?= $video[$id_video]->song ?> –<?= $video[$id_video]->artist ?></h3></span>
                 </div>
             </div>
         </div>

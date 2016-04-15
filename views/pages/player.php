@@ -35,24 +35,17 @@ $movie_id = random_id_movie($pdo);
                             <a class="container-icon-volume" href="javascript:void(0);" onclick="muteVolume();">
                                 <img class="icon-player icon-volume-mute icon-volume" src="<? URL ?>src/images/icon-volume.svg" alt="volume">
                             </a>
-<<<<<<< HEAD
-                            <? // $pre_movie_id = pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab); ?>
-=======
-                            <? //$pre_movie_id = pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab); ?>
->>>>>>> master
+
                             <a href="<?= URL ?>player?id=<?= $pre_movie_id?>" onclick="previous();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
                             </a>
                             <a href="javascript:void(0);" onclick="playPause();">
                                 <img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
                             </a>
-<<<<<<< HEAD
-                            <? // $next_movie_id = next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab); ?>
-                            <a href="<?= URL ?>player?id=<?= $next_movie_id?>" onclick="next();">
-=======
+
                             <? //$next_movie_id = next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab); ?>
                             <a href="<?= URL ?>player?id=<?= $movie_id?>" onclick="next();">
->>>>>>> master
+
                                 <img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
                             </a>
                             <a href="<?= URL ?>report?id=<?= $movie?>">

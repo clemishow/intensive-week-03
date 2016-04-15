@@ -6,6 +6,12 @@ if(isset($_GET['id'])){
     $index_movie = $_GET['id'];
 }
 
+$query      = $pdo->query("SELECT song, artist FROM videos WHERE movie_id = '$index_movie'");
+$video      = $query->fetch();
+
+echo '<pre>';
+print_r($video->song);
+echo '</pre>'; 
 
 $ch = curl_init();
 
@@ -95,10 +101,10 @@ $video     = $query->fetch();
                 <h3>Casting</h3> 
                 <ul>
                     <? for($k = 0; $k < 5; $k++){
-                                if($k < count($credits->cast)){
-                                    ?><li><?= $credits->cast[$k]->name?></li><?
-                                }
-                        } ?>
+    if($k < count($credits->cast)){
+                    ?><li><?= $credits->cast[$k]->name?></li><?
+    }
+} ?>
                 </ul>
             </div>
         </div>
@@ -116,19 +122,19 @@ $video     = $query->fetch();
                     <span>
                         <? 
     $j = 0;
-                       foreach($credits->crew as $crew):
+                        foreach($credits->crew as $crew):
 
-                       if($credits->crew[$j]->job == 'Director'){
-                           $job = true;
-                           break;
-                       }
-                       $j++;
-                       endforeach;
-                       if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
-                           //echo true;
-                           //echo '<pre>';
-                           //print_r($credits->crew);
-                           //echo '</pre>';
+                        if($credits->crew[$j]->job == 'Director'){
+                            $job = true;
+                            break;
+                        }
+                        $j++;
+                        endforeach;
+                        if(isset($credits->crew[$j]->job) && $credits->crew[$j]->job == 'Director'){
+                            //echo true;
+                            //echo '<pre>';
+                            //print_r($credits->crew);
+                            //echo '</pre>';
                         ?>
                         <span><?= $credits->crew[$j]->name ?></span>
                         <?}?>
@@ -144,6 +150,10 @@ $video     = $query->fetch();
         <div class="row">
             <h3>Bandes sons</h3>
             <div class="playlist">
+                <?
+                    for($p = 0; $p < 5; $p++){
+                        if($p < count($video->song)){
+                ?>
                 <div class="row">
                     <div class="col-md-1">
                         <a href="javascript:void(0);">
@@ -155,53 +165,20 @@ $video     = $query->fetch();
 
                     <div class="col-md-11 container-informations-music">
                         <div class="title-song">
-                            Gone, Gone, Gone
+                            <?= $video->song ?>
                         </div> 
                         <div class="title-artist">
-                            HANS ZIMMER
+                            <?= $video->artist ?>
                         </div> 
                     </div>
                 </div>
 
-                <div class="row">
-                    <span>
-                        <a href="javascript:void(0);">
-                            <div class="col-md-1">
-                                <div class="container-icon-play">
-                                    <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
-                                </div>
-                            </div>
-                        </a>
-                    </span>
-                    <div class="col-md-11 container-informations-music">
-                        <div class="title-song">
-                            Gone, Gone, Gone
-                        </div> 
-                        <div class="title-artist">
-                            HANS ZIMMER
-                        </div> 
-                    </div>
-                </div>
+                <?
+                        }
+                    } 
+                ?>
 
-                <div class="row">
-                    <span>
-                        <a href="javascript:void(0);">
-                            <div class="col-md-1">
-                                <div class="container-icon-play">
-                                    <img class="icon-play" src="<? URL ?>src/images/icon-play-black.svg" alt="play">
-                                </div>
-                            </div>
-                        </a>
-                    </span>
-                    <div class="col-md-11 container-informations-music">
-                        <div class="title-song">
-                            Gone, Gone, Gone
-                        </div> 
-                        <div class="title-artist">
-                            HANS ZIMMER
-                        </div> 
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

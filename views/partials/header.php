@@ -1,8 +1,17 @@
 <?php
 
+<<<<<<< HEAD
 // setcookie('id_movie_tab'+$lenght_id_tab, $id_movie_tab, time() + 24 * 3600, '/');
 // setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
 // setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
+=======
+//setcookie('id_movie_tab'+$lenght_id_tab, $id_movie_tab, time() + 24 * 3600, '/');
+//setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
+//setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
+//echo '<pre>';
+//print_r($_COOKIE);
+//echo '</pre>';
+>>>>>>> master
 
 ?>
 
@@ -27,9 +36,15 @@
                     ?>
                     <!-- <a href="<?= URL ?>player?id=<?= $movie?>"> -->
                         <?
+<<<<<<< HEAD
     //} 
            // else{
                // $movie = random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab);
+=======
+    } 
+            else{
+                $movie = random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/);
+>>>>>>> master
                         ?>
                        <!--  <a href="<?= URL ?>player?id=<?= $movie?>"> -->
                             <?

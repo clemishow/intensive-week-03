@@ -94,9 +94,11 @@ $video     = $query->fetch();
             <div class="casting-informations">
                 <h3>Casting</h3> 
                 <ul>
-                    <li><?= $credits->cast[0]->name?></li>
-                    <li><?= $credits->cast[1]->name?></li>
-                    <li><?= $credits->cast[2]->name?></li>
+                    <? for($k = 0; $k < 5; $k++){
+                                if($k < count($credits->cast)){
+                                    ?><li><?= $credits->cast[$k]->name?></li><?
+                                }
+                        } ?>
                 </ul>
             </div>
         </div>

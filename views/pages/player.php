@@ -33,14 +33,14 @@ $next_movie_id = 0;
                             <a href="javascript:void(0);">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
                             </a>
-                            <? $pre_movie_id = pre_id_movie($counter_id, $id_movie_tab); ?>
+                            <? $pre_movie_id = pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab); ?>
                             <a href="<?= URL ?>player?id=<?= $pre_movie_id?>" onclick="previous();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
                             </a>
                             <a href="javascript:void(0);" onclick="playPause();">
                                 <img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
                             </a>
-                            <? $next_movie_id = next_id_movie($pdo, $counter_id, $id_movie_tab); ?>
+                            <? $next_movie_id = next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab); ?>
                             <a href="<?= URL ?>player?id=<?= $next_movie_id?>" onclick="next();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
                             </a>

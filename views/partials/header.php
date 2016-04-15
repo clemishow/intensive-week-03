@@ -1,3 +1,15 @@
+<?php
+
+setcookie('id_movie_tab'+$lenght_id_tab, $id_movie_tab, time() + 24 * 3600, '/');
+setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
+setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
+echo '<pre>';
+print_r($_COOKIE);
+echo '</pre>';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,7 +32,7 @@
                         <?
     } 
             else{
-                $movie = random_id_movie($pdo, $counter_id, $id_movie_tab);
+                $movie = random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab);
                         ?>
                         <a href="<?= URL ?>player?id=<?= $movie?>">
                             <?

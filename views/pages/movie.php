@@ -57,9 +57,9 @@ $credits = json_decode($credits);
                     <div class="casting-informations">
                        <h3>Casting</h3> 
                        <ul>
-                           <li>Joseph Cooper</li>
-                           <li>Murphy Cooper</li>
-                           <li>Amelia Brand</li>
+                           <li><?= $credits->cast[0]->name?></li>
+                           <li><?= $credits->cast[1]->name?></li>
+                           <li><?= $credits->cast[2]->name?></li>
                        </ul>
                     </div>
                 </div>

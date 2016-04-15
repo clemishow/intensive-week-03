@@ -59,7 +59,7 @@ function onPlayerError() {
 function playPause() {
   if (player && state_video == 1) {
     player.pauseVideo();
-    player_icon_play.src="http://localhost/intensive-week-03/src/images/icon-play.svg";
+    player_icon_play.src="http://hetic.saulnier.fr/src/images/icon-play.svg";
     setTimeout(function() {
   		state_video = 0;
   	},300);
@@ -67,7 +67,7 @@ function playPause() {
 
   else if (player && state_video == 0) {
   	player.playVideo();
-  	player_icon_play.src="http://localhost/intensive-week-03/src/images/icon-pause.svg";
+  	player_icon_play.src="http://hetic.saulnier.fr/src/images/icon-pause.svg";
   	setTimeout(function() {
   		state_video = 1;
   	},300);
@@ -78,7 +78,7 @@ function muteVolume() {
 	if (!player.isMuted()) {
 		player.mute();
 		setTimeout(function() {
-	  		player_icon_volume.src="http://localhost/intensive-week-03/src/images/icon-mute.svg";
+	  		player_icon_volume.src="http://hetic.saulnier.fr/src/images/icon-mute.svg";
 			player_icon_volume.className = "icon-mute";
 			player_icon_volume.classList.remove('icon-volume');
 	  	},150);
@@ -87,7 +87,7 @@ function muteVolume() {
 	else if (player.isMuted()) {
 		player.unMute();
 		setTimeout(function() {
-			player_icon_volume.src="http://localhost/intensive-week-03/src/images/icon-volume.svg";
+			player_icon_volume.src="http://hetic.saulnier.fr/src/images/icon-volume.svg";
 			player_icon_volume.className = "icon-volume";
 			player_icon_volume.classList.remove('icon-mute');
 		},150);

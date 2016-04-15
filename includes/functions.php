@@ -254,7 +254,7 @@ if(!empty($_POST['submitlogin'])) {
             $email = '';
             if ($_GET['id']) {
                 $a = $_GET['id'];
-                header('location:' . URL . 'report?=' . $_GET['id']');  
+                header('location:' . URL . 'report?=' . $_GET['id']);  
             }
             else 
                 header('location:' . URL . 'account');

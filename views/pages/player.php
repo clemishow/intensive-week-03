@@ -76,7 +76,7 @@ $movie_id = random_id_movie($pdo);
                 </div>
                 <div class="col-md-6">
                     <div class="button-player-right">
-                        <a href="https://twitter.com/share" class="twitter-share-button button-share-movie" data-via="Mooving">
+                        <a target="_blank" href="https://twitter.com/intent/tweet?text=Découvre%20cette%20musique%20de%20film%20: <?= URL ?>player?id=<?= $movie_id ?>%20avec%20@themooving" class="twitter-share-button button-share-movie" data-via="Mooving">
                             <span><img class="icon-twitter" src="<? URL ?>src/images/icon-twitter.svg" alt="twitter"></span>
                             Partagez
                         </a>

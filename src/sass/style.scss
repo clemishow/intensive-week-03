@@ -226,6 +226,7 @@ footer .info-db {
   height: 10px;
   margin: 10px auto;
   border-radius: 50px;
+  animation-play-state: paused;
 }
 
 .container-animation .ball:nth-child(1) {
@@ -233,7 +234,7 @@ footer .info-db {
   -webkit-animation: right 1s infinite ease-in-out;
   -moz-animation: right 1s infinite ease-in-out;
   animation: right 1s infinite ease-in-out;
-  animation-play-state: played;   
+  animation-play-state: running;   
 }
 
 .container-animation .ball:nth-child(2) {
@@ -241,7 +242,7 @@ footer .info-db {
   -webkit-animation: left 1.1s infinite ease-in-out;
   -moz-animation: left 1.1s infinite ease-in-out;
   animation: left 1.1s infinite ease-in-out;
-  animation-play-state: played;
+  animation-play-state: running;
 }
 
 
@@ -250,7 +251,7 @@ footer .info-db {
   -webkit-animation: right 1.05s infinite ease-in-out;
   -moz-animation: right 1.05s infinite ease-in-out;
   animation: right 1.05s infinite ease-in-out;
-  animation-play-state: played;
+  animation-play-state: running;
 }
 
 .container-animation .ball:nth-child(4) {
@@ -258,7 +259,7 @@ footer .info-db {
   -webkit-animation: left 1.15s infinite ease-in-out;
   -moz-animation: left 1.15s infinite ease-in-out;
   animation: left 1.15s infinite ease-in-out;
-  animation-play-state: played;
+  animation-play-state: running;
  }
 
 .container-animation .ball:nth-child(5) {
@@ -266,7 +267,7 @@ footer .info-db {
   -webkit-animation: right 1.1s infinite ease-in-out;
   -moz-animation: right 1.1s infinite ease-in-out;
   animation: right 1.1s infinite ease-in-out;
-  animation-play-state: played;
+  animation-play-state: running;
 }
 
 .container-animation .ball:nth-child(6) {
@@ -274,7 +275,7 @@ footer .info-db {
   -webkit-animation: left 1.05s infinite ease-in-out;
   -moz-animation: left 1.05s infinite ease-in-out;
   animation: left 1.05s infinite ease-in-out;
-  animation-play-state: played;
+  animation-play-state: running;
  }
 
 .container-animation .ball:nth-child(7) {
@@ -282,7 +283,7 @@ footer .info-db {
   -webkit-animation: right 1s infinite ease-in-out;
   -moz-animation: right 1s infinite ease-in-out;
   animation: right 1s infinite ease-in-out;
-  animation-play-state: played;
+  animation-play-state: running;
 }
 
 

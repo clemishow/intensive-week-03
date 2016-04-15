@@ -13,7 +13,6 @@
 	/* ICONS */
 	player_icon_play							= player_container.controls.querySelector('.icon-play');
 	player_icon_volume							= player_container.controls.querySelector('.icon-volume-mute');
-	console.log(player_icon_volume);
 
 	var tag = document.createElement('script');
 	tag.src = "https://www.youtube.com/iframe_api";
@@ -60,6 +59,9 @@ function playPause() {
   if (player && state_video == 1) {
     player.pauseVideo();
     player_icon_play.src="http://hetic.saulnier.fr/src/images/icon-play.svg";
+    for (var i=0;i>7;i++) {
+    	$('.ball:nth-child('+i+')').css('animation-play-state', 'paused');	
+    }
     setTimeout(function() {
   		state_video = 0;
   	},300);

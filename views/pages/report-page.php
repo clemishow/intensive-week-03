@@ -2,9 +2,6 @@
 if(!empty($_GET['id'])){
     $movie = $_GET['id'];
 }
-else{
-    $movie = random_id_movie($pdo, $counter_id, $id_movie_tab);
-}
 $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video      = $query->fetch();
 ?>

@@ -64,7 +64,7 @@ function random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/) {
 
         do{
 
-            $movie_id   = mt_rand ( 0 , 380000 );
+            $movie_id   = mt_rand ( 0 , 100 );
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
@@ -74,7 +74,7 @@ function random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/) {
     else{
         do{
 
-            $movie_id   = mt_rand ( 0 , 380000 );
+            $movie_id   = mt_rand ( 0 , 100 );
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
@@ -247,13 +247,17 @@ if(!empty($_POST['submitlogin'])) {
 
         // Test password
         if($user->password_signin == $password_signin) {
-            $success[] = 'Connexion réussie, bienvenue '. $user->last . ' ' . $user->first;
             $_SESSION['state'] = true;
             $_SESSION['email'] = $email_signin;
             setcookie('first-name', $user->first, time() + 365*24*3600, null, null, false, true);
             setcookie('last-name', $user->last, time() + 365*24*3600, null, null, false, true);
             $email = '';
-            header('location:' . URL . 'account');
+            if ($_GET['id']) {
+                $a = $_GET['id'];
+                header('location:' . URL . 'report?=' . $_GET['id']');  
+            }
+            else 
+                header('location:' . URL . 'account');
         }
 
         else

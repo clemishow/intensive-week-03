@@ -95,7 +95,6 @@ function next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab){
 
 }
 
-
 /*
 *** ADD A SONG
 **/
@@ -263,7 +262,6 @@ $email_signin = '';
 $errors_signin = array();
 $success_signin = array();
 
-
 // DATA SENT
 if(!empty($_POST['submitsignin'])) {
 
@@ -303,7 +301,7 @@ if(!empty($_POST['submitsignin'])) {
         $errors_signin['email_signin'] = 'Veuillez remplir le champ Email';
     }
 
-    if(empty($errors_signin)) {
+    if(empty($errors_signin)) {    
         $prepare = $pdo->prepare('INSERT INTO users (last,first,email_signin,password_signin) VALUES (:last,:first,:email_signin,:password_signin)');
         $prepare->bindValue('last',$last);
         $prepare->bindValue('first',$first);

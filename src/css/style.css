@@ -163,9 +163,109 @@ footer .info-db {
     position: absolute;
     transition: 300ms all all; }
 
+/*
+*** ANIMATION BETWEEN PAGES
+**/
+.container-animation {
+  width: 200px;
+  height: 100px;
+  padding-top: 100px;
+  margin: 0 auto;
+  display: none; }
+
+.container-animation .ball {
+  width: 10px;
+  height: 10px;
+  margin: 10px auto;
+  border-radius: 50px; }
+
+.container-animation .ball:nth-child(1) {
+  background: #fefefe;
+  -webkit-animation: right 1s infinite ease-in-out;
+  -moz-animation: right 1s infinite ease-in-out;
+  animation: right 1s infinite ease-in-out; }
+
+.container-animation .ball:nth-child(2) {
+  background: #34b475;
+  -webkit-animation: left 1.1s infinite ease-in-out;
+  -moz-animation: left 1.1s infinite ease-in-out;
+  animation: left 1.1s infinite ease-in-out; }
+
+.container-animation .ball:nth-child(3) {
+  background: #fefefe;
+  -webkit-animation: right 1.05s infinite ease-in-out;
+  -moz-animation: right 1.05s infinite ease-in-out;
+  animation: right 1.05s infinite ease-in-out; }
+
+.container-animation .ball:nth-child(4) {
+  background: #34b475;
+  -webkit-animation: left 1.15s infinite ease-in-out;
+  -moz-animation: left 1.15s infinite ease-in-out;
+  animation: left 1.15s infinite ease-in-out; }
+
+.container-animation .ball:nth-child(5) {
+  background: #fefefe;
+  -webkit-animation: right 1.1s infinite ease-in-out;
+  -moz-animation: right 1.1s infinite ease-in-out;
+  animation: right 1.1s infinite ease-in-out; }
+
+.container-animation .ball:nth-child(6) {
+  background: #34b475;
+  -webkit-animation: left 1.05s infinite ease-in-out;
+  -moz-animation: left 1.05s infinite ease-in-out;
+  animation: left 1.05s infinite ease-in-out; }
+
+.container-animation .ball:nth-child(7) {
+  background: #fefefe;
+  -webkit-animation: right 1s infinite ease-in-out;
+  -moz-animation: right 1s infinite ease-in-out;
+  animation: right 1s infinite ease-in-out; }
+
+@-webkit-keyframes right {
+  0% {
+    -webkit-transform: translate(-15px); }
+  50% {
+    -webkit-transform: translate(15px); }
+  100% {
+    -webkit-transform: translate(-15px); } }
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: translate(15px); }
+  50% {
+    -webkit-transform: translate(-15px); }
+  100% {
+    -webkit-transform: translate(15px); } }
+@-moz-keyframes right {
+  0% {
+    -moz-transform: translate(-15px); }
+  50% {
+    -moz-transform: translate(15px); }
+  100% {
+    -moz-transform: translate(-15px); } }
+@-moz-keyframes left {
+  0% {
+    -moz-transform: translate(15px); }
+  50% {
+    -moz-transform: translate(-15px); }
+  100% {
+    -moz-transform: translate(15px); } }
+@keyframes right {
+  0% {
+    transform: translate(-15px); }
+  50% {
+    transform: translate(15px); }
+  100% {
+    transform: translate(-15px); } }
+@keyframes left {
+  0% {
+    transform: translate(15px); }
+  50% {
+    transform: translate(-15px); }
+  100% {
+    transform: translate(15px); } }
 /**
 *** PLAYER INDEX
-*/
+**/
 .player-controls {
   margin-top: 35vh; }
 
@@ -216,8 +316,28 @@ footer .info-db {
   top: -2.5px; }
 
 /* CONTROLS + INFOS */
+.player-controls .icons-container {
+  margin-left: 65px; }
+
 .player-controls .icons-container a {
   padding: 15px; }
+
+.player-controls .icons-container .icon-volume {
+  width: 32px;
+  position: relative;
+  bottom: 40px; }
+
+.player-controls .icons-container .icon-mute {
+  width: 16px;
+  position: relative;
+  bottom: 40px; }
+
+.player-controls .container-icon-volume {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: -65px;
+  margin-top: -15px; }
 
 .player-controls .container-informations-music {
   position: relative;
@@ -298,7 +418,10 @@ footer .info-db {
 
 .player-bottom .icons-container {
   position: relative;
-  left: -18px; }
+  left: -44px; }
+
+.player-bottom .icons-container {
+  margin-left: 50px; }
 
 .player-bottom .icons-container .icon-player {
   width: 15px;
@@ -499,6 +622,9 @@ header .hidden-search-bar {
   bottom: 14px; }
 
 /* POSTER */
+.page-movie {
+  margin-bottom: 50px; }
+
 .page-movie .container-poster {
   width: 100%;
   position: relative;
@@ -561,7 +687,12 @@ header .hidden-search-bar {
   background: #34b475;
   padding: 10px 20px;
   border-radius: 5px;
-  z-index: 101; }
+  z-index: 101;
+  transition: 150ms all; }
+
+.page-movie .add-song:hover {
+  background: #37a375;
+  color: #fefefe; }
 
 .hidden-movie-details {
   display: none; }

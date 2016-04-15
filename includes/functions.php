@@ -9,7 +9,7 @@ if(!isset($id_movie_tab) && !isset($counter_id)){
 
 
 /*
-*** PRECEDENT ID MOVIE
+*** PREVIOUS ID MOVIE
 **/
 
 

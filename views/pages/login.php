@@ -4,7 +4,7 @@
 	</div>
 	<div class="divider"></div>
 </div>
-<div class="col-md-6">
+<div class="col-md-5">
 	<div class="row">
 		<div class="col-md-12 text-center text-uppercase">
 			<?php if(!empty($errors_login)): ?>
@@ -28,22 +28,29 @@
 		<form action="" name="connection" method="post">
 			<div class="col-md-12 login">
 				<h4 class="text-uppercase">Connexion</h4>
-				<div class="form-group">
-					<label for="email_login">Adresse Email</label>
-			   		<input name="email_signin" type="email" class="form-control username" id="email_login" value="<?= $email_signin ?>">
+				<div class="row">
+					<div class="group">      
+				      <input type="email" name="email_signin" value="<?= $email_signin ?>" required>
+					      <span class="highlight"></span>
+					      <span class="bar"></span>
+				      <label>Adresse Email</label>
+				    </div>
 				</div>
-				<div class="form-group">
-					<label for="password_login">Mot de passe</label>
-					<input name="password_signin" type="password" class="form-control password_" id="password_login">
-				</div>
-				<div class="text-center container-btn-submit">
-					<input name="submitlogin" type="submit" class="text-uppercase btn-submit submit-login" value="Envoyer">
-				</div>
+			    <div class="row">
+					<div class="group">      
+						<input type="password" name="password_signin" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						<label>Mot de passe</label>
+					</div>
+			    </div>
+			   <input name="submitlogin" type="submit" class="text-uppercase btn-submit submit-login" value="Envoyer">
 			</div>
 		</form>
 	</div>
 </div>
-<div class="col-md-6">
+<div class="col-md-2"></div>
+<div class="col-md-5">
 	<div class="row">
 		<div class="col-md-12 text-center text-uppercase">
 			<?php if(!empty($errors_signin)): ?>
@@ -67,25 +74,39 @@
 		<form action="" name="registration" method="post">
 			<div class="col-md-12 login">
 				<h4 class="text-uppercase">Inscription</h4>
-				<div class="form-group">
-					<div class="row">
-						<div class="col-md-6">
-							<label for="last">Nom</label>
-							<input type="text" class="form-control" name="last" id="last" value="<?= $last ?>">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="group">      
+							<input type="text" name="last" value="<?= $last ?>" required>
+								<span class="highlight"></span>
+								<span class="bar"></span>
+							<label>Nom</label>
 						</div>
-						<div class="col-md-6">
-							<label for="first">Prénom</label>
-							<input type="text" class="form-control" name="first" id="first" value="<?= $first ?>">
+					</div>
+					<div class="col-md-6">
+						<div class="group">      
+							<input type="text" name="first" value="<?= $first ?>" required>
+								<span class="highlight"></span>
+								<span class="bar"></span>
+							<label>Prénom</label>
 						</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="email_signin">Adresse Email</label>
-			   		<input name="email_signin" type="email_signin" class="form-control" id="email_signin" value="<?= $email_signin ?>">
+				<div class="row">
+					<div class="group">      
+						<input name="email_signin" type="email_signin" value="<?= $email_signin ?>" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						<label>Adresse Email</label>
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="password_signin">Mot de passe</label>
-					<input name="password_signin" type="password" class="form-control" id="password_signin">
+				<div class="row">
+					<div class="group">      
+						<input name="password_signin" type="password" required>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+						<label>Mot de passe</label>
+					</div>
 				</div>
 				<div class="text-center container-btn-submit">
 					<input name="submitsignin" type="submit" class="text-uppercase btn-submit" value="Envoyer">

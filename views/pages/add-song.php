@@ -1,3 +1,10 @@
+<div class="header-title">
+	<div class="container-title">
+		<h2>Ajouter une musique</h2>
+	</div>
+	<div class="divider"></div>
+</div>
+<div class="divider"></div>
 <div class="add-song">
 		<div class="row">
 			<div class="col-md-4"></div>
@@ -25,7 +32,7 @@
 				<div class="col-md-4">
 					<form action="" method="post">
 						<div class="form-group">
-							<label for="url">URL :</label>
+							<label for="url">YouTube URL :</label>
 							<input id="url" type="text" name="url" class="form-control" value="<?= $url ?>">
 						</div>
 						<div class="form-group">

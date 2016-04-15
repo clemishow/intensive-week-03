@@ -10,6 +10,7 @@ Groupe 15
 Numéro de SIRET :  EN COURS D'ATTRIBUTION
 Responsable editorial : Groupe 15
 27 bis rue du Progrès
+Téléphone :0606060606 - Fax : 0606060607
 Email : mooving@gmail.com
 Site Web : <a href="http://www.mooving.fr">www.mooving.fr</a>
 </br><br>

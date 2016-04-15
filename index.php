@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'config/config.php';	
+require 'config/config.php';	
 include 'includes/functions.php';
 
 $q = empty($_GET['q']) ? '' : $_GET['q'];

@@ -32,8 +32,8 @@ $movie_id = random_id_movie($pdo);
                 <div class="row">
                     <div class="text-center">
                         <div class="icons-container">
-                            <a href="javascript:void(0);">
-                                <img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
+                            <a class="container-icon-volume" href="javascript:void(0);" onclick="muteVolume();">
+                                <img class="icon-player icon-volume-mute icon-volume" src="<? URL ?>src/images/icon-volume.svg" alt="volume">
                             </a>
 <<<<<<< HEAD
                             <? // $pre_movie_id = pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab); ?>

@@ -28,6 +28,7 @@
 		<form action="" name="connection" method="post">
 			<div class="col-md-12 login">
 				<h4 class="text-uppercase">Connexion</h4>
+				
 				<div class="row">
 					<div class="group">      
 				      <input type="email" name="email_signin" value="<?= $email_signin ?>" required>

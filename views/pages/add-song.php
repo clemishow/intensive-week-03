@@ -1,6 +1,6 @@
 <div class="header-title">
 	<div class="container-title">
-		<h2>Ajouter une musique</h2>
+		<h2>Ajouter une musique </h2>
 	</div>
 	<div class="divider"></div>
 </div>

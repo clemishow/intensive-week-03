@@ -33,18 +33,18 @@ $next_movie_id = 0;
                             <a href="javascript:void(0);">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-share.svg" alt="share">
                             </a>
-                            <? $pre_movie_id = pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab); ?>
+                            <? // $pre_movie_id = pre_id_movie($counter_id, $id_movie_tab, $lenght_id_tab); ?>
                             <a href="<?= URL ?>player?id=<?= $pre_movie_id?>" onclick="previous();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
                             </a>
                             <a href="javascript:void(0);" onclick="playPause();">
                                 <img class="icon-player icon-play" src="<? URL ?>src/images/icon-pause.svg" alt="pause">
                             </a>
-                            <? $next_movie_id = next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab); ?>
+                            <? // $next_movie_id = next_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab); ?>
                             <a href="<?= URL ?>player?id=<?= $next_movie_id?>" onclick="next();">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-next.svg" alt="next">
                             </a>
-                            <a href="<?= URL ?>movie?id=<?= $movie?>">
+                            <a href="<?= URL ?>report?id=<?= $movie?>">
                                 <img class="icon-player" src="<? URL ?>src/images/icon-report.svg" alt="share">
                             </a>
                         </div>
@@ -60,15 +60,22 @@ $next_movie_id = 0;
                     </div>
                 </div>
             </div>
-            <div class="row text-center">
+            <div class="row buttons-player text-center">
                 <div class="col-md-6">
                     <div class="button-player-left">
-                        <a href="<?= URL ?>movie-player?id=<?= $movie?>"><button>VOIR</button></a>
+
+                        <a class="button-see-movie" href="<?= URL ?>movie-player?id=<?= $movie?>">
+                            <span><img class="icon-movie" src="<? URL ?>src/images/icon-movie.svg" alt="movie"></span>
+                            Découvrir le film
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="button-player-right">
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="Mooving"><button>Tweet</button></a>
+                        <a href="https://twitter.com/share" class="twitter-share-button button-share-movie" data-via="Mooving">
+                            <span><img class="icon-twitter" src="<? URL ?>src/images/icon-twitter.svg" alt="twitter"></span>
+                            Partagez
+                        </a>
                         <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
                     </div>
                 </div>

@@ -26,13 +26,16 @@ else if ($q == 'account')
 else if ($q == 'logout') 
     $page = 'logout';
 
+else if ($q == 'report') 
+    $page = 'report';
+
 else if ($q == 'add-song') 
     $page = 'add-song';
 
 else 
     $page = '404';
 
-if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song' || $q == 'movie' ){
+if($q == 'search' || $q == 'player' || $q == 'account' || $q == 'add-song' || $q == 'movie' || $q == 'report' ){
     include 'controllers/'.$page.'.php';
     include 'views/partials/header.php';
     include 'views/pages/'.$page.'.php';

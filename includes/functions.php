@@ -1,18 +1,18 @@
 <?php
 
-if(isset($_COOKIE['counter_id']) && isset($_COOKIE['id_movie_tab'])){
-    //$counter_id = $_COOKIE['counter_id'];
-    //$lenght_id_tab = $_COOKIE['lenght_id_tab'];
-    //$id_movie_tab = $_COOKIE['id_movie_tab'+$lenght_id_tab];
-}
-elseif(!isset($id_movie_tab) && !isset($counter_id)){
-    $id_movie_tab = $_GET['id'];
-    $counter_id = 0;
-    $lenght_id_tab = 0;
-    setcookie('id_movie_tab'+$counter_id, $id_movie_tab, time() + 24 * 3600, '/');
-    setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
-    setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
-}
+// if(isset($_COOKIE['counter_id']) && isset($_COOKIE['id_movie_tab'])){
+//     //$counter_id = $_COOKIE['counter_id'];
+//     //$lenght_id_tab = $_COOKIE['lenght_id_tab'];
+//     //$id_movie_tab = $_COOKIE['id_movie_tab'+$lenght_id_tab];
+// }
+// elseif(!isset($id_movie_tab) && !isset($counter_id)){
+//     $id_movie_tab = $_GET['id'];
+//     $counter_id = 0;
+//     $lenght_id_tab = 0;
+//     setcookie('id_movie_tab'+$counter_id, $id_movie_tab, time() + 24 * 3600, '/');
+//     setcookie('counter_id', $counter_id, time() + 24 * 3600, '/');
+//     setcookie('lenght_id_tab', $lenght_id_tab, time() + 24 * 3600, '/');
+// }
 
 
 /*
@@ -48,7 +48,7 @@ function random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab) {
 
         do{
 
-            $movie_id   = mt_rand ( 0 , 349158 );
+            $movie_id   = mt_rand ( 0 , 100 );
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
@@ -58,7 +58,7 @@ function random_id_movie($pdo, $counter_id, $id_movie_tab, $lenght_id_tab) {
     else{
         do{
 
-            $movie_id   = mt_rand ( 0 , 349158 );
+            $movie_id   = mt_rand ( 0 , 100 );
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
@@ -109,7 +109,7 @@ $artist = '';
 if(!empty($_POST['submitUrl'])) {
 
     $url 	= strip_tags(trim($_POST['url']));
-    //    $url    = get_youtube_id_from_url($url);
+    $url    = get_youtube_id_from_url($url);
     $song   = strip_tags(trim($_POST['song']));
     $artist = strip_tags(trim($_POST['artist']));
     $id_movie = $_GET['id'];
@@ -148,12 +148,54 @@ if(!empty($_POST['submitUrl'])) {
 
 }
 
-//function get_youtube_id_from_url($url) {
-//    if (stristr($url,'youtu.be/'))
-//    {preg_match('/(https:|http:|)(\/\/www\.|\/\/|)(.*?)\/(.{11})/i', $url, $final_ID); return $final_ID[4]; }
-//    else 
-//    {@preg_match('/(https:|http:|):(\/\/www\.|\/\/|)(.*?)\/(embed\/|watch.*?v=|)([a-z_A-Z0-9\-]{11})/i', $url, $IDD); return $IDD[5]; }
-//}
+function get_youtube_id_from_url($url) {
+   if (stristr($url,'youtu.be/'))
+   {preg_match('/(https:|http:|)(\/\/www\.|\/\/|)(.*?)\/(.{11})/i', $url, $final_ID); return $final_ID[4]; }
+   else 
+   {@preg_match('/(https:|http:|):(\/\/www\.|\/\/|)(.*?)\/(embed\/|watch.*?v=|)([a-z_A-Z0-9\-]{11})/i', $url, $IDD); return $IDD[5]; }
+}
+
+/*
+*** REPORT SONG
+**/
+
+$errors_report = [];
+$success_report = [];
+$reason = '';
+
+if(!empty($_POST['submitReport'])) {
+
+    $id_movie = $_GET['id'];
+    $reason   = strip_tags(trim($_POST['reason']));
+    $user     = $_SESSION['email'];
+    $state    = 'NULL';
+    
+
+    if(empty($reason)) {
+        $errors_report[] = 'Veuillez remplir la raison';
+    }
+
+    if(empty($errors_report)) {
+        $prepare = $pdo->prepare('INSERT INTO reports (id_movie,reason,user,state) VALUES (:id_movie,:reason,:user,:state)');
+        $prepare->bindValue('id_movie',$id_movie);
+        $prepare->bindValue('reason',$reason);
+        $prepare->bindValue('user',$user);
+        $prepare->bindvalue('state',$state);
+        $execute = $prepare->execute();
+
+        if(!$execute) {
+            $errors_report[] = 'Une erreur s\'est produite';
+        }
+
+        else {
+            $success_report[] = 'Votre demande a bien été enregistrée';
+            $url   = '';
+            $song   = '';
+            $artist = '';
+        }
+    }
+
+}
 
 /* 
 *** LOGIN SCRIPT 
@@ -194,6 +236,7 @@ if(!empty($_POST['submitlogin'])) {
         if($user->password_signin == $password_signin) {
             $success[] = 'Connexion réussie, bienvenue '. $user->last . ' ' . $user->first;
             $_SESSION['state'] = true;
+            $_SESSION['email'] = $user->email;
             setcookie('first-name', $user->first, time() + 365*24*3600, null, null, false, true);
             setcookie('last-name', $user->last, time() + 365*24*3600, null, null, false, true);
             $email = '';

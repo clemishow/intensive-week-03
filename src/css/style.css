@@ -249,6 +249,42 @@ footer .info-db {
 .button-player-right {
   float: left; }
 
+.buttons-player .button-see-movie {
+  background: #34b475;
+  padding: 10px 20px;
+  transition: 150ms all;
+  position: relative;
+  top: 30px; }
+
+.buttons-player .button-see-movie .icon-movie {
+  width: 28px;
+  position: relative;
+  bottom: 2px;
+  right: 8px; }
+
+.buttons-player .button-see-movie:hover {
+  color: #fefefe;
+  background: #37a375;
+  transition: 150ms all; }
+
+.buttons-player .button-share-movie {
+  background: #1da1f2;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  transition: 150ms all;
+  top: 30px; }
+
+.buttons-player .button-share-movie:hover {
+  color: #fefefe;
+  background: #2198ce;
+  transition: 150ms all; }
+
+.buttons-player .button-share-movie .icon-twitter {
+  width: 20px;
+  position: relative;
+  bottom: 2px;
+  right: 18px; }
+
 /**
 *** PLAYER MOVIE
 */

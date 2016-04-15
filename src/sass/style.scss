@@ -313,6 +313,48 @@ footer .info-db {
   float: left;
 }
 
+.buttons-player .button-see-movie {
+  background: $color-dominant;
+  padding: 10px 20px;
+  transition: $transition-fast;
+  position: relative;
+    top: 30px;
+}
+
+.buttons-player .button-see-movie .icon-movie {
+  width: 28px;
+  position: relative;
+  bottom: 2px;
+  right: 8px;
+}
+
+.buttons-player .button-see-movie:hover {
+  color: $color-light;
+  background: $color-dominant-hover;
+  transition: $transition-fast;
+}
+
+.buttons-player .button-share-movie {
+  background: #1da1f2;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  transition: $transition-fast;
+    top: 30px;
+}
+
+.buttons-player .button-share-movie:hover {
+  color: $color-light;
+  background: #2198ce;
+  transition: $transition-fast;
+}
+
+.buttons-player .button-share-movie .icon-twitter {
+  width: 20px;
+  position: relative;
+  bottom: 2px;
+  right: 18px;
+}
+
 /**
 *** PLAYER MOVIE
 */

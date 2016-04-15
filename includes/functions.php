@@ -64,7 +64,7 @@ function random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/) {
 
         do{
 
-            $movie_id   = mt_rand ( 0 , 100 );
+            $movie_id   = mt_rand ( 0 , 380000 );
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 
@@ -74,7 +74,7 @@ function random_id_movie($pdo/*, $counter_id, $id_movie_tab, $lenght_id_tab*/) {
     else{
         do{
 
-            $movie_id   = mt_rand ( 0 , 100 );
+            $movie_id   = mt_rand ( 0 , 380000 );
             $query      = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie_id'");
             $video      = $query->fetch();
 

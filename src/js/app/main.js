@@ -26,7 +26,6 @@ function getContentDetails(url) {
         
        success : function(code_html, statut) { // code_html contient le HTML renvoyé
            showDetailsMovie(code_html);
-           $('.container-animation').css('display', 'none');
        },
 
        error : function(resultat, statut, erreur) {
@@ -70,7 +69,6 @@ $('.button-player-left').on('click', function(){
 	$('#movie-details').removeClass('hidden-movie-details');
 	$('footer').css('display', 'none');
 	$('.site-wrapper').css('display', 'none');
-	$('.container-animation').css('display', 'block');
 });
 
 $(document.body).on('click', '.cross-container' ,function(){

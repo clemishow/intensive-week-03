@@ -59,7 +59,7 @@ function playPause() {
   if (player && state_video == 1) {
     player.pauseVideo();
     player_icon_play.src="http://hetic.saulnier.fr/src/images/icon-play.svg";
-    for (var i=0;i>7;i++) {
+    for (var i=0;i<8;i++) {
     	$('.ball:nth-child('+i+')').css('animation-play-state', 'paused');	
     }
     setTimeout(function() {
@@ -69,6 +69,9 @@ function playPause() {
 
   else if (player && state_video == 0) {
   	player.playVideo();
+  	for (var i=0;i<8;i++) {
+    	$('.ball:nth-child('+i+')').css('animation-play-state', 'running');	
+    }
   	player_icon_play.src="http://hetic.saulnier.fr/src/images/icon-pause.svg";
   	setTimeout(function() {
   		state_video = 1;

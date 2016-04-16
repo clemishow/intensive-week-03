@@ -488,7 +488,8 @@ header .active-search a {
   outline: none;
   font-size: 25px;
   border-bottom: solid 3px #34b475;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  margin-top: 40px; }
 
 .nav_pages {
   width: 100%;
@@ -698,6 +699,9 @@ header .hidden-search-bar {
 
 .page-movie .playlist .row {
   margin-bottom: 30px; }
+
+.page-movie .first-add-song {
+  color: #252525; }
 
 .page-movie .add-song {
   position: fixed;

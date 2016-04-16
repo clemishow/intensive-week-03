@@ -111,7 +111,10 @@ $video     = $query->fetchAll();
                 <h3>Bandes sons</h3>
                 <div class="playlist">
                 <?
-                    for($p = 0; $p < count($video); $p++){
+                    if(empty($video))
+                        echo 'Ce film ne dispose n\'aucune musique, mais vous pouvez l\'ajouter vous même en <a class="first-add-song" href="' . URL . 'add-song?id=' . $index_movie . '"> cliquant ici</a>';
+                    else if(!empty($video)) {
+                        for($p = 0; $p < count($video); $p++){
                 ?>
                 <div class="row">
                     <div class="col-md-1">
@@ -133,6 +136,7 @@ $video     = $query->fetchAll();
                 </div>
 
                 <?
+                        }
                     } 
                 ?>
             </div>

@@ -4,11 +4,15 @@ $active = 'active';
 
 <div id="search">
     <form method="GET" action="#">
-        <input class="search-bar" type="search" name="keywords" placeholder="Recherche">
-        <input type="submit" class="hide">
+       <div class="group">      
+          <input type="search" name="keywords" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+          <label>Recherche</label>
+        </div>
+          <input type="submit" class="hide">
     </form>
 </div>
-
 <?php
 
 $api_key = "c68c6286e0d2e8c23192ea047e8fcbe1";

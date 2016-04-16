@@ -586,6 +586,7 @@ header .active-search a {
   font-size: 25px;
   border-bottom: solid 3px $color-dominant;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .nav_pages {
@@ -844,6 +845,10 @@ header .hidden-search-bar {
 
 .page-movie .playlist .row {
   margin-bottom: 30px;
+}
+
+.page-movie .first-add-song {
+  color: $color-dark;
 }
 
 .page-movie .add-song {

@@ -47,9 +47,19 @@ $movie     = $_GET['id'];
 $query     = $pdo->query("SELECT * FROM videos WHERE movie_id = '$movie'");
 $video     = $query->fetchAll();
 
-//echo '<pre>';
-//print_r($video);
-//echo '</pre>';
+if(!empty($_GET['id'])){
+    $movie = $_GET['id'];
+}
+else{
+    $movie = random_id_movie($pdo/*, $counter_id, $id_movie_tab*/);
+}
+
+$id_video = random_id_video_movie($pdo, $movie);
+
+$pre_movie_id  = $movie;
+//$next_movie_id = 0;
+
+$movie_id = random_id_movie($pdo);
 
 ?>
 <div class="cross-container">
@@ -62,14 +72,14 @@ $video     = $query->fetchAll();
         <div class="col-xs-4 text-center">
             <div class="row">
                 <div class="icons-container">
-                    <a href="<?= URL ?>player?id=<?= $movie//$pre_movie_id?>" onclick="previous();">
+                    <a href="<?= URL ?>player?id=<?= $pre_movie_id?>" onclick="previous();">
                         <img class="icon-player" src="<? URL ?>src/images/icon-previous-black.svg" alt="previous">
                     </a>
                     <a href="javascript:void(0);" onclick="playPause();">
                         <img class="icon-player icon-play-bottom" src="<? URL ?>src/images/icon-pause-black.svg" alt="pause">
                     </a>
                     <? //$next_movie_id = next_id_movie($pdo, $counter_pre_id, $pre_id_movie_tab); ?>
-                    <a href="<?= URL ?>player?id=<?= $movie//$next_movie_id?>" onclick="next();">
+                    <a href="<?= URL ?>player?id=<?= $movie_id?>" onclick="next();">
                         <img class="icon-player" src="<? URL ?>src/images/icon-next-black.svg" alt="next">
                     </a>
                 </div>

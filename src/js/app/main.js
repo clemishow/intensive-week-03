@@ -39,6 +39,10 @@ function showDetailsMovie(content) {
     divDetails.innerHTML = content;
 }
 
+function previous() {
+	window.history.back();
+}
+
 /*
 *** ≠ INTERACTIONS 
 **/

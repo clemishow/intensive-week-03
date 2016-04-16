@@ -49,7 +49,7 @@ $movie_id = random_id_movie($pdo);
                                     <img class="icon-player icon-volume-mute icon-volume" src="<? URL ?>src/images/icon-volume.svg" alt="volume">
                                 </a>
                 
-                                <a href="<?= URL ?>player?id=<?= $pre_movie_id?>" onclick="previous();">
+                                <a href="" onclick="previous();">
                                     <img class="icon-player" src="<? URL ?>src/images/icon-previous.svg" alt="previous">
                                 </a>
                                 <a href="javascript:void(0);" onclick="playPause();">
@@ -102,7 +102,6 @@ $movie_id = random_id_movie($pdo);
         <?php require 'includes/player-frame.php'; ?>
     </div>
     <div>
-        <!-- <h3><span class="info-song"><?= $video[$id_video]->song ?></span> – <span class="info-song"><?= $video[$id_video]->artist ?></span></h3> -->
     </div>
 </section>
 <script src="src/js/app/player.js"></script>
